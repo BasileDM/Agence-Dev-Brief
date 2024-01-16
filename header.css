@@ -1,7 +1,11 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
 header {
     height: 100svh;
     width: 100svh;
-    margin: 0;
-    padding: 0;
     background-image: url('images/bg_hero_desktop.svg');
 }
