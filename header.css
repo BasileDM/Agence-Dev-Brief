@@ -1,5 +1,26 @@
 header {
-    height: 100svh;
-    width: 100svh;
-    background-image: url('images/bg_hero_desktop.svg');
+   height: 100svh;
+   background-image: url("images/bg_hero_desktop.svg");
+   background-color: var(--Very_Pale_Cyan);
+
+   p {
+      font-family: "OpenSans";
+   }
+}
+
+h1 {
+   font-family: "Poppins";
+}
+
+.header-content-container {
+   display: flex;
+   flex: 1 1;
+
+   div {
+        flex: 1;
+   }
+   img {
+        flex: 1;
+        width: 300px;
+   }
 }

@@ -25,3 +25,12 @@ body, html {
    margin: 0;
    font-size: 18px;
 }
+
+.boutonRose {
+   padding: 20px 50px 20px;
+   border: none;
+   border-radius: 50px;
+   background-color: var(--Pink);
+   color: white;
+   font-family: "Poppins";
+}
