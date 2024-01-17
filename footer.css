@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(144, 104, 104);
+}
+body,html{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+#conteneur_iacs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#tel, #mail, #adresse 
+  {
+    list-style: none;
+  }
+#about_us ul
+{
+  list-style:none;
+  
+}
+#about:hover, #what:hover, #faq:hover, #career_2:hover, #blog:hover, #contact:hover
+{text-decoration: underline;
+cursor: pointer;}
+
+
+#career ul
+{
+  list-style: none;
+}
+
+#socials ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+#socials ul li 
+  { padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgb(0, 0, 0);
+    border-radius: 100%;
+}
+
+#socials ul li:hover
+{border:1px solid hsl(322, 100%, 66%);}
+
+
+svg:hover
+{
+  fill: hsl(322, 100%, 66%);}
+
+  #tel:before, #mail:before, #adresse:before{
+    content: "";
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    margin: -2px 0 0 -30px;}
+
+    #tel:before {
+        background-image: url(images/icon_phone.svg);
+    
+      }
+      #mail:before {
+        background-image: url(images/icon_email.svg);
+      }
+    
+      #adresse:before {
+        background-image: url(images/icon_location.svg);
+      }
+
+      li {
+        margin-top: 6px;
+      }
