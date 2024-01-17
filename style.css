@@ -1,15 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.divACote {
-    display: flex;
-=======
-header {
-    height: 100svh;
-    width: 100svh;
-    margin: 0;
-    padding: 0;
-    background-image: url('images/bg_hero_desktop.svg');
->>>>>>> f8c2e6f5c032ac81747fae8af0b00a829b13b842
+:root {
+   --Pink: hsl(322, 100%, 66%);
+   --Very_Pale_Cyan: hsl(193, 100%, 96%);
+   --Very_Dark_Cyan: hsl(192, 100%, 9%);
+   --Grayish_Blue: hsl(208, 11%, 55%);
 }
-=======
->>>>>>> f0ff5afa063a1dec4470511e7b8e71e6919beec0
+
+@font-face {
+   font-family: "OpenSans";
+   src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+   font-family: "OpenSansBold";
+   src: url(fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+   font-family: "Poppins";
+   src: url(fonts/Poppins-SemiBold.ttf);
+}
+
+body, html {
+   padding: 0;
+   margin: 0;
+   font-size: 18px;
+}
