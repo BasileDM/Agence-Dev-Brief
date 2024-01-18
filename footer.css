@@ -3,7 +3,8 @@ footer{background-color: var(--Very_Dark_Cyan);
 color: aliceblue;
 padding: 7%;}
 
-.Copyright{text-align: right;}
+.Copyright{
+  text-align: right;}
 
 #conteneur_iacs {
     display: grid;
