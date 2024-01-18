@@ -2,14 +2,6 @@ header {
    height: 100svh;
    background-image: url("images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
-
-   p {
-      font-family: "OpenSans";
-   }
-}
-
-h1 {
-   font-family: "Poppins";
 }
 
 /*Logo and call to action container*/
