@@ -48,3 +48,13 @@ header {
         width: 100%;
    }
 }
+
+@media screen and (max-width: 576px) {
+   .header-content-container {
+      flex-direction: column;
+      align-items: center;
+   }
+   header {
+      background-image: url('images/bg_hero_mobile.svg');
+   }
+}
