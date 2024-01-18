@@ -1,11 +1,6 @@
-footer{
-    background-color: rgb(144, 104, 104);
-}
-body,html{
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-}
+
+footer{background-color: var(--Very_Dark_Cyan);
+color: aliceblue;}
 
 #conteneur_iacs {
     display: grid;
