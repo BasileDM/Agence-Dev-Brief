@@ -81,3 +81,10 @@ cursor: pointer;}
       li {
         margin-top: 6px;
       }
+
+  @media screen and (max-width: 576px) {
+    #conteneur_iacs {
+      display: grid;
+      grid-template-columns: 2fr;
+    }
+  }
