@@ -1,11 +1,15 @@
 
 footer{background-color: var(--Very_Dark_Cyan);
-color: aliceblue;}
+color: aliceblue;
+padding: 7%;}
 
 #conteneur_iacs {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
 }
+#adresse{text-align: justify;}
+
+
 #tel, #mail, #adresse 
   {
     list-style: none;
@@ -39,11 +43,11 @@ cursor: pointer;}
     border-radius: 100%;
 }
 
-#socials ul li:hover
-{border:1px solid hsl(322, 100%, 66%);}
+#socials ul li:hover{
+border:1px solid hsl(322, 100%, 66%);}
 
 
-svg:hover
+#socials ul li:hover svg
 {
   fill: hsl(322, 100%, 66%);}
 
