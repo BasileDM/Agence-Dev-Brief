@@ -65,7 +65,7 @@ cursor: pointer;}
     width: 15px;
     height: 15px;
     position: absolute;
-    margin: -2px 0 0 -30px;}
+    margin: 5px 0 0 -30px;}
 
     #tel:before {
         background-image: url(images/icon_phone.svg);
