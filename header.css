@@ -9,15 +9,17 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 20svh;
-   padding: 0 80px 0;
+   height: 15svh;
+   padding: 10px 2rem;
 
+   /*logo*/
    img {
-      width: 150px;
+      max-width: 600px;
    }
 }
 #header-top-call-to-action-button {
-   padding: 10px 50px 10px;
+   padding: 8px 40px;
+   text-wrap: nowrap;
    border: none;
    border-radius: 50px;
    background-color: white;
@@ -34,27 +36,51 @@ header {
 /*Main content container for the header*/
 .header-content-container {
    display: flex;
+   padding: 0 40px;
 
    div {
         flex: 1;
-        padding: 20px 0 0 85px;
+        padding: 2rem 2rem;
         letter-spacing: -1px;
    }
    #header-content-image-container {
       flex : 1.3;
-      padding: 20px 85px 0;
+      padding: 2rem 4rem 0;
    }
    img {
-        width: 100%;
+        max-width: 100%;
    }
 }
 
 @media screen and (max-width: 576px) {
+   #header-logo-call-to-action-container {   
+      height: 4rem;
+
+      /*logo*/
+      img {
+         max-width: 50svw;
+      }
+   }
+   #header-top-call-to-action-button {
+      width: 8rem;
+   }
    .header-content-container {
       flex-direction: column;
-      align-items: center;
+      text-align: center;
+      div {
+         padding: 0.5rem;
+      }
+      #header-content-image-container {
+         padding: 1rem 1rem 0;
+      }
+      img {
+         padding: 0.5rem;
+      }
    }
    header {
       background-image: url('images/bg_hero_mobile.svg');
+   }
+   h1 {
+      font-size: 1.5rem;
    }
 }
