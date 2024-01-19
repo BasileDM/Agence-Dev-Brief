@@ -59,7 +59,10 @@ main p {
   #boiteGetReady {
     left: 3%;
     padding-top: 8%;
+    margin-top: 20%;
+    transform: translateY(88px);
+    height: 200px;
     text-align: center;
     width: 92%;
-  }
+    }
 }
