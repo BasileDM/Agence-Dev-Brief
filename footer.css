@@ -29,6 +29,7 @@ padding: 7%;}
 cursor: pointer;}
 
 
+
 #career ul
 {
   list-style: none;
@@ -87,4 +88,10 @@ cursor: pointer;}
       display: grid;
       grid-template-columns: 2fr;
     }
+  }
+
+  @media  screen and (max-width: 576px) {
+    #logo{padding: 43% 0% 5% 0%;
+    scroll-margin-right: 30%;}
+    
   }
