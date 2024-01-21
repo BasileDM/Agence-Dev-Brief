@@ -4,7 +4,7 @@ header {
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
    background-size: cover;
-   font-size: clamp(18px, 1.43vw, 40px);
+   font-size: clamp(17px, 1.43vw, 40px);
 }
 
 h1 {
@@ -36,7 +36,7 @@ h1 {
    background-color: white;
    color: black;
    font-family: "OpenSansBold";
-   font-size: clamp(0.5rem, 1.1svw, 2rem);
+   font-size: clamp(0.8rem, 1.1svw, 2rem);
    box-shadow: 0px 3px 12px 1px rgba(128, 128, 128, 0.15);
    cursor: pointer;
 }
@@ -51,7 +51,8 @@ h1 {
    align-items: center;
    justify-content: center;
    padding: 0 2rem;
-   max-height: 90svh;
+   max-height: min-content;
+   min-height: fit-content;
    .left-text-hero {
         flex: 1;
         padding: 2rem 3rem 2rem 2rem;
@@ -89,32 +90,35 @@ h1 {
       padding: 0.5rem 1rem;
    }
    .header-content-container {
-      height: 100%;
+      min-height: 90svh;
+      max-height: min-content;
       flex-direction: column;
       text-align: center;
-      justify-content: center;
+      padding: 1rem;
 
       .left-text-hero {
-         padding: 0 2rem;
+         padding: 0 1rem;
          display: flex;
+         flex: 1;
          flex-direction: column;
-         justify-content: flex-end;
-      }
-      .left-text-hero > * {
          justify-content: center;
+         align-items: center;
+
+         .boutonRose {            
+            max-width: 250px;
+            padding: 0.7rem 3rem;
+         }
       }
       #header-content-image-container {
-         padding: 1rem 1rem 0;
+         flex: 1;
+         padding: 0 2rem 2rem 2rem;
       }
       img {
          padding: 0.5rem;
       }
    }
    header {
-      min-height: 760px;
+      min-height: 650px;
       background-image: url('images/bg_hero_mobile.svg');
-   }
-   h1 {
-      font-size: 1.5rem;
    }
 }
