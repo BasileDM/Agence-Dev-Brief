@@ -19,12 +19,15 @@
    font-family: "Poppins";
    src: url(fonts/Poppins-SemiBold.ttf);
 }
+
 .Copyright{text-align: right;}
+
 body, html {
    padding: 0;
    margin: 0;
    font-size: 18px;
    font-family: 'OpenSans';
+   font-size: clamp(17px, 1.43vw, 40px);
 }
 
 h1, h2, h3 {
