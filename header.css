@@ -9,10 +9,13 @@ header {
    #arrow-image {
       fill: var(--Very_Dark_Cyan);
       position: absolute;
-      top: calc(100svh - 50px);
-      left: calc(50svw - 15px);
-      width: 30px;
+      top: calc(100svh - 3rem);
+      left: calc(50svw - calc(clamp(30px, 2.7vw, 100px)/2));
+      width: clamp(30px, 2.7vw, 100px);
       opacity: 80%;
+      cursor: pointer;
+      
+      animation: heroArrow 3s infinite;
    }
 }
 
@@ -134,15 +137,13 @@ h1 {
    }
 }
 
-/* @keyframes heroArrow {
+@keyframes heroArrow {
    0%, 100% {
-      transform: translateY(0);
+      transform: translateY(7px);
+      scale: 100%;
    }
    50% {
-      transform: translateY(-60px);
+      transform: translateY(-7px);
+      scale: 120%;
    }
 }
-
-#arrow-link {
-   animation: heroArrow 3s infinite;
-} */
