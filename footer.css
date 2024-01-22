@@ -83,15 +83,15 @@ cursor: pointer;}
         margin-top: 6px;
       }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 790px) {
     #conteneur_iacs {
       display: grid;
-      grid-template-columns: 2fr;
+      grid-template-columns: 2fr;}
+    #logo {padding: 43% 0% 5% 0%;
+        scroll-margin-right: 30%;}
+        
     }
-  }
 
-  @media  screen and (max-width: 576px) {
-    #logo{padding: 43% 0% 5% 0%;
-    scroll-margin-right: 30%;}
+ 
     
-  }
+  
