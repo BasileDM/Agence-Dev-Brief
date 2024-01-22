@@ -1,4 +1,3 @@
-
 let formulaire = `
 <form action="#" method="post">
 <fieldset>
@@ -22,23 +21,27 @@ let formulaire = `
 
 </form>`;
 
-
 const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
 const CTAFormulaire = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
 
 function apparitionBoite() {
-  popUp.classList.replace("invisible", "visible");
-  contenuPopup.innerHTML = formulaire;
+  setTimeout(() => {
+    popUp.classList.replace("invisible", "visible");
+    contenuPopup.innerHTML = formulaire;
+  }, 10);
 }
 
 function disparitionBoite() {
-    popUp.classList.replace("visible", "invisible");
+  popUp.classList.replace("visible", "invisible");
 }
 
-  
 CTAFormulaire.addEventListener("click", apparitionBoite);
 croixBouton.addEventListener("click", disparitionBoite);
 
-
+document.addEventListener("click", function (event) {
+  if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
+    disparitionBoite();
+  }
+});
