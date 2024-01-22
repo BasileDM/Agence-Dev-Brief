@@ -5,12 +5,22 @@ header {
    background-repeat: no-repeat;
    background-size: cover;
    font-size: clamp(17px, 1.43vw, 40px);
+   
+   #arrow-image {
+      fill: var(--Very_Dark_Cyan);
+      position: absolute;
+      top: calc(100svh - 50px);
+      left: calc(50svw - 15px);
+      width: 30px;
+      opacity: 80%;
+   }
 }
 
 h1 {
    font-size: clamp(1.4rem, 3vw, 4rem);
    margin: 0;
 }
+
 
 /*#region Top Bar*/
 /*Logo and call to action container*/
@@ -123,3 +133,16 @@ h1 {
       background-image: url("images/bg_hero_mobile.svg");
    }
 }
+
+/* @keyframes heroArrow {
+   0%, 100% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-60px);
+   }
+}
+
+#arrow-link {
+   animation: heroArrow 3s infinite;
+} */
