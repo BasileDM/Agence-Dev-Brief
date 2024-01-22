@@ -77,7 +77,7 @@ h1 {
    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 790px) {
    #logo-calltoaction-container {
       height: 4rem;
       padding: 5px 15px;
