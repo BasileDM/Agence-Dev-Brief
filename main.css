@@ -24,7 +24,8 @@ main p {
 #boiteGetReady {
   background-color: white;
   height: 160px;
-  transform: translateY(42px);
+  padding-bottom: 120px;
+  transform: translateY(70px);
   z-index: 1;
   position: relative;
   left: 18%;
