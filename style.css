@@ -51,3 +51,24 @@ h1, h2, h3 {
 }
 
 
+<<<<<<< HEAD
+=======
+/* A partir d'ici pour JAVASCRIPT */
+
+.invisible {
+   display: none;
+}
+
+.visible {
+   display: block;
+   z-index: 10;
+   position: fixed;
+   top: 40svh;
+   left: 40svw;
+   padding: 20px;
+   border: 2px solid transparent;
+   border-radius: 30px;
+   box-shadow: 0 0 0px 5px var(--Pink);
+   background-color: white;
+}
+>>>>>>> 6d6bfe38ff6d3925cd35b959532dcbb3ee5ee0a4

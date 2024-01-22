@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="main.css" />
       <link rel="stylesheet" href="footer.css" />
-      <script src="script.js"></script>
+      <script src="script.js" defer></script>
+      <script src="main.js" defer ></script>
       <title>Agence Dev Web</title>
    </head>
    <body>
@@ -92,7 +93,7 @@
 
          <div id="boiteGetReady">
             <h2>Ready To Build Your Community?</h2>
-            <button class="boutonRose">Get Started for Free</button>
+            <button id="CTA-formulaire" class="boutonRose">Get Started for Free</button>
          </div>
       </main>
       <footer>
@@ -194,5 +195,12 @@
          </div>
          <p class="Copyright">@ Copyright 2024</p>
       </footer>
+
+      <div id="popUp" class="invisible">
+         <button id="closeButton">x</button>
+         <div id="contenuPopup"></div>
+         <div id="fondPopUp"></div>
+      </div>
+
    </body>
 </html>
