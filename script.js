@@ -1,5 +1,5 @@
 let formulaire = `
-<form id= "myform">
+<form id= "myform" action="#" method="post" onsubmit="apparitionMessage(event)">
 <fieldset>
    <legend>Informations personnelles</legend>
    <div class="field">
@@ -15,12 +15,10 @@ let formulaire = `
       <input type="email" name="mail" />
    </div>
    <div class="field">
-          <input type="submit" value="Soumettre" id="submit_button" onclick:"apparitionMessage()" />
+          <input type="submit" value="Soumettre" id="submit_button"  />
         </div>
 </fieldset>
 </form>`;
-// Est ce que le bouton soumettre je dois le mettre en JS ou en HTML ? 
-// Si je le mets en JS comment je peux ensuite le sélectionner? 
 
 const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
@@ -42,10 +40,14 @@ function disparitionBoite() {
   fondPopUp.classList.replace("visible","invisible");
 }
 
-function apparitionMessage() {
+function apparitionMessage(event) {
+  event.preventDefault();
   setTimeout(() => {
-  contenuPopup.innerHTML = "Bravo";},10);
-  boutonSubmit.classList.add("invisible");};
+  contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";},10);
+  // boutonSubmit.classList.add("invisible");
+
+
+};
 
 
 CTAFormulaire.addEventListener("click", apparitionBoite);
@@ -55,16 +57,6 @@ document.addEventListener("click", function (event) {
     disparitionBoite();
   }
 });
-
-document.addEventListener("submit", function(event){
-  if(event.target && event.target.id === "myform") {
-    gererSubmit(event);
-  }
-})
-function gererSubmit(event) {
-  event.preventDefault();
-}
-
 // let submit = document.getElementById("submit_button");
 // submit.innerHTML = "Bravo vous êtes enregistrés";
 // Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
