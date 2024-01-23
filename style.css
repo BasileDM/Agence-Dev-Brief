@@ -43,8 +43,8 @@ h1, h2, h3 {
    color: var(--Very_Pale_Cyan);
    font-family: "OpenSansBold";
    font-size: clamp(0.6rem, 1.1svw, 2rem);
+   animation: animationBoutonRose 3s alternate;
 }
-
 .boutonRose:hover {
    opacity: 0.7;
    cursor: pointer;
@@ -92,3 +92,14 @@ background-color: white;
 #closeButton{
    margin-left: 90%;
 }
+@keyframes animationBoutonRose {
+   0% {
+     transform: translateX(-500px);
+     scale: (5%)
+     
+  }
+  100% {
+     transform : translateX(0px);
+     scale: (100%);
+  }
+ }
