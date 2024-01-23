@@ -3,16 +3,16 @@ let formulaire = `
 <fieldset>
    <legend>Informations personnelles</legend>
    <div class="field">
-      <label for="first_name">Nom : </label>
-      <input type="text" name="first_name" />
-   </div>
-   <div class="field">
-      <label for="first_name">Prénom* : </label>
+      <label for="first_name">Nom*  </label>
       <input type="text" name="first_name" required />
    </div>
    <div class="field">
-      <label for="mail">E-Mail : </label>
-      <input type="email" name="mail" />
+      <label for="first_name">Prénom*  </label>
+      <input type="text" name="first_name" required />
+   </div>
+   <div class="field">
+      <label for="mail">E-Mail*  </label>
+      <input type="email" name="mail" required />
    </div>
    <div class="field">
           <input type="submit" value="Soumettre" id="submit_button"  />

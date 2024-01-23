@@ -83,6 +83,15 @@ h3 {
    z-index: 9;
 }
 
+#submit_button {
+   font-size: large;
+   border-radius: 8px;
+   background-color: var(--Pink);
+}
+
+#closeButton {
+   margin-left: 90%;
+}
 @keyframes animationBoutonRose {
    0% {
       transform: translateX(-500px);
