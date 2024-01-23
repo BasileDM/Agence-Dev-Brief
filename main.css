@@ -67,3 +67,13 @@ main p {
     width: 92%;
     }
 }
+
+.field input{
+  width: auto;
+  margin-left: auto;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+}
