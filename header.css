@@ -5,16 +5,16 @@ header {
    background-repeat: no-repeat;
    background-size: cover;
    font-size: clamp(17px, 1.43vw, 40px);
-   
+
    #arrow-image {
       fill: var(--Very_Dark_Cyan);
       position: absolute;
       top: calc(100svh - 3rem);
-      left: calc(50svw - calc(clamp(30px, 2.7vw, 100px)/2));
+      left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
       width: clamp(30px, 2.7vw, 100px);
       opacity: 80%;
       cursor: pointer;
-      
+
       animation: heroArrow 2s infinite;
    }
 }
@@ -23,7 +23,6 @@ h1 {
    font-size: clamp(1.4rem, 3vw, 4rem);
    margin: 0;
 }
-
 
 /*#region Top Bar*/
 /*Logo and call to action container*/
@@ -66,7 +65,7 @@ h1 {
    padding: 0 2rem;
    max-height: min-content;
    min-height: fit-content;
-   
+
    .left-text-hero {
       flex: 1;
       padding: 2rem 3rem 2rem 2rem;
@@ -84,7 +83,7 @@ h1 {
    /*Main image in the hero page content*/
    img {
       width: 100%;
-      animation: animationImage 3s alternate; 
+      animation: animationImage 3s alternate;
    }
    p {
       margin: 2rem 0;
@@ -139,7 +138,8 @@ h1 {
 }
 
 @keyframes heroArrow {
-   0%, 100% {
+   0%,
+   100% {
       transform: translateY(7px);
       scale: 100%;
    }
@@ -152,11 +152,10 @@ h1 {
 @keyframes animationImage {
    0% {
       transform: translateX(500px);
-      scale: (5%)
-      
+      scale: (5%);
    }
    100% {
-      transform : translateX(0px);
+      transform: translateX(0px);
       scale: (100%);
    }
 }

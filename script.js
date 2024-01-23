@@ -26,36 +26,33 @@ const CTAFormulaire = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
 let boutonSubmit = document.getElementById("submit_button");
 
-
 function apparitionBoite() {
-    contenuPopup.innerHTML = formulaire;
-    setTimeout(() => {
-    popUp.classList.replace("invisible", "visible");
-    fondPopUp.classList.replace("invisible","visible");
-  }, 10);
+   contenuPopup.innerHTML = formulaire;
+   setTimeout(() => {
+      popUp.classList.replace("invisible", "visible");
+      fondPopUp.classList.replace("invisible", "visible");
+   }, 10);
 }
 
 function disparitionBoite() {
-  popUp.classList.replace("visible", "invisible");
-  fondPopUp.classList.replace("visible","invisible");
+   popUp.classList.replace("visible", "invisible");
+   fondPopUp.classList.replace("visible", "invisible");
 }
 
 function apparitionMessage(event) {
-  event.preventDefault();
-  setTimeout(() => {
-  contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";},10);
-  // boutonSubmit.classList.add("invisible");
-
-
-};
-
+   event.preventDefault();
+   setTimeout(() => {
+      contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
+   }, 10);
+   // boutonSubmit.classList.add("invisible");
+}
 
 CTAFormulaire.addEventListener("click", apparitionBoite);
 croixBouton.addEventListener("click", disparitionBoite);
 document.addEventListener("click", function (event) {
-  if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
-    disparitionBoite();
-  }
+   if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
+      disparitionBoite();
+   }
 });
 // let submit = document.getElementById("submit_button");
 // submit.innerHTML = "Bravo vous êtes enregistrés";
