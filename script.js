@@ -15,11 +15,9 @@ let formulaire = `
       <input type="email" name="mail" />
    </div>
 </fieldset>
-   <div class="field">
-      <input type="submit" value="Soumettre" id="submit_button" />
-   </div>
-
 </form>`;
+// Est ce que le bouton soumettre je dois le mettre en JS ou en HTML ? 
+// Si je le mets en JS comment je peux ensuite le sélectionner? 
 
 const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
@@ -27,6 +25,7 @@ const CTAFormulaire = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
 
 function apparitionBoite() {
+  changeCouleurFond();
   setTimeout(() => {
     popUp.classList.replace("invisible", "visible");
     contenuPopup.innerHTML = formulaire;
@@ -45,3 +44,16 @@ document.addEventListener("click", function (event) {
     disparitionBoite();
   }
 });
+
+function changeCouleurFond () {
+  let body = document.body;
+  let boite = document.getElementById("boiteGetReady");
+  body.style.backgroundColor = "grey";
+  boite.style.backgroundColor = "grey";
+}
+
+// let submit = document.getElementById("submit_button");
+// submit.innerHTML = "Bravo vous êtes enregistrés";
+
+// Mettre un fond écran flouté derrière la boîte CTA
+// Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
