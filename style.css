@@ -59,13 +59,26 @@ h1, h2, h3 {
 
 .visible {
    display: block;
-   z-index: 10;
+}
+
+#popUp {
+z-index: 10;
+position: fixed;
+top: 40%;
+left: 40%;
+padding: 20px;
+border: 2px solid transparent;
+border-radius: 30px;
+box-shadow: 0 0 0px 5px var(--Pink);
+background-color: white;
+}
+
+#fondPopUp {
    position: fixed;
-   top: 40svh;
-   left: 40svw;
-   padding: 20px;
-   border: 2px solid transparent;
-   border-radius: 30px;
-   box-shadow: 0 0 0px 5px var(--Pink);
-   background-color: white;
+   width: 100vw;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   background-color:rgba(0, 0, 0, 0.60);   
+   z-index: 9;
 }

@@ -1,5 +1,5 @@
 let formulaire = `
-<form action="#" method="post">
+<form id= "myform">
 <fieldset>
    <legend>Informations personnelles</legend>
    <div class="field">
@@ -14,6 +14,9 @@ let formulaire = `
       <label for="mail">E-Mail : </label>
       <input type="email" name="mail" />
    </div>
+   <div class="field">
+          <input type="submit" value="Soumettre" id="submit_button" onclick:"apparitionMessage()" />
+        </div>
 </fieldset>
 </form>`;
 // Est ce que le bouton soumettre je dois le mettre en JS ou en HTML ? 
@@ -23,37 +26,45 @@ const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
 const CTAFormulaire = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
+let boutonSubmit = document.getElementById("submit_button");
+
 
 function apparitionBoite() {
-  changeCouleurFond();
-  setTimeout(() => {
-    popUp.classList.replace("invisible", "visible");
     contenuPopup.innerHTML = formulaire;
+    setTimeout(() => {
+    popUp.classList.replace("invisible", "visible");
+    fondPopUp.classList.replace("invisible","visible");
   }, 10);
 }
 
 function disparitionBoite() {
   popUp.classList.replace("visible", "invisible");
+  fondPopUp.classList.replace("visible","invisible");
 }
+
+function apparitionMessage() {
+  setTimeout(() => {
+  contenuPopup.innerHTML = "Bravo";},10);
+  boutonSubmit.classList.add("invisible");};
+
 
 CTAFormulaire.addEventListener("click", apparitionBoite);
 croixBouton.addEventListener("click", disparitionBoite);
-
 document.addEventListener("click", function (event) {
   if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
     disparitionBoite();
   }
 });
 
-function changeCouleurFond () {
-  let body = document.body;
-  let boite = document.getElementById("boiteGetReady");
-  body.style.backgroundColor = "grey";
-  boite.style.backgroundColor = "grey";
+document.addEventListener("submit", function(event){
+  if(event.target && event.target.id === "myform") {
+    gererSubmit(event);
+  }
+})
+function gererSubmit(event) {
+  event.preventDefault();
 }
 
 // let submit = document.getElementById("submit_button");
 // submit.innerHTML = "Bravo vous êtes enregistrés";
-
-// Mettre un fond écran flouté derrière la boîte CTA
 // Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
