@@ -27,6 +27,7 @@ html {
    font-size: 18px;
    font-family: "OpenSans";
    font-size: clamp(17px, 1.43vw, 40px);
+   overflow: hidden;
 }
 
 h1,
@@ -104,4 +105,9 @@ h3 {
       transform: translateX(0px);
       scale: (100%);
    }
+}
+
+body,
+html {
+   overflow: auto;
 }

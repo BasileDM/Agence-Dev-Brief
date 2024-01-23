@@ -16,6 +16,7 @@ header {
       cursor: pointer;
 
       animation: heroArrow 2s infinite;
+      animation-fill-mode: forwards;
    }
 }
 
