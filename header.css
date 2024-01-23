@@ -84,6 +84,7 @@ h1 {
    /*Main image in the hero page content*/
    img {
       width: 100%;
+      animation: animationImage 3s alternate; 
    }
    p {
       margin: 2rem 0;
@@ -145,5 +146,17 @@ h1 {
    50% {
       transform: translateY(-7px);
       scale: 120%;
+   }
+}
+
+@keyframes animationImage {
+   0% {
+      transform: translateX(500px);
+      scale: (5%)
+      
+   }
+   100% {
+      transform : translateX(0px);
+      scale: (100%);
    }
 }

@@ -48,6 +48,7 @@ cursor: pointer;}
     align-items: center;
     border:1px solid rgb(255, 252, 252);
     border-radius: 100%;
+    animation: animationSocials 3s alternate
 }
 
 #socials ul li:hover{
@@ -92,6 +93,16 @@ cursor: pointer;}
         
     }
 
- 
+    @keyframes animationSocials {
+      0% {
+         transform: translateX(225px);
+         scale: (5%)
+         
+      }
+      100% {
+         transform : translateX(0px);
+         scale: (100%);
+      }
+   }
     
   
