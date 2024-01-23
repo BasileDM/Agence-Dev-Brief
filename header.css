@@ -15,7 +15,7 @@ header {
       opacity: 80%;
       cursor: pointer;
       
-      animation: heroArrow 3s infinite;
+      animation: heroArrow 2s infinite;
    }
 }
 
