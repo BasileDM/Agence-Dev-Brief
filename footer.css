@@ -97,8 +97,8 @@ li {
       padding: 43% 0% 5% 0%;
       scroll-margin-right: 30%;
    }
-}
 
+}
 @keyframes animationSocials {
    0% {
       transform: translateX(225px);
