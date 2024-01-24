@@ -1,6 +1,6 @@
 header {
    height: 100svh;
-   min-height: 650px;
+   min-height: 550px;
    background-image: url("images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
@@ -9,7 +9,7 @@ header {
 
    #arrow-link {
       position: absolute;
-      top: clamp(572px, 93%, 95%);
+      top: clamp(520px, 93%, 95%);
       left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
    }
 
@@ -138,8 +138,15 @@ h1 {
       }
    }
    header {
-      min-height: 650px;
+      min-height: 643px;
       background-image: url("images/bg_hero_mobile.svg");
+
+      #arrow-link {
+         position: absolute;
+         top: clamp(613px, 93%, 95%);
+         left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
+
+      }
    }
 }
 
