@@ -23,7 +23,7 @@ main p {
 #boiteGetReady {
    background-color: white;
    height: 160px;
-   padding-bottom: 120px;
+   padding-bottom: 70px;
    transform: translateY(70px);
    z-index: 1;
    position: relative;
@@ -59,6 +59,7 @@ main p {
    #boiteGetReady {
       left: 3%;
       padding-top: 8%;
+      padding-bottom: 0px;
       margin-top: 20%;
       transform: translateY(88px);
       height: 200px;
