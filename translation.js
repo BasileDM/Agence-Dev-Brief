@@ -30,11 +30,13 @@ function switchLanguage() {
         for (let i = 0; i < translationArray.length; i++) {
             translationArray[i][0].textContent = translationArray[i][2];
         }
+        document.getElementById('flag').setAttribute('src', 'images/fr-flag.svg')
         isEnglish = false;
     } else {
         for (let i = 0; i < translationArray.length; i++) {
             translationArray[i][0].textContent = translationArray[i][1];
         }
+        document.getElementById('flag').setAttribute('src', 'images/en-flag.svg')
         isEnglish = true;
     }
 }

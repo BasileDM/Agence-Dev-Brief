@@ -3,12 +3,16 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="images/favicon_32_32.png">
       <link rel="stylesheet" href="header.css" />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="main.css" />
       <link rel="stylesheet" href="footer.css" />
+      <link rel="stylesheet" href="dark_mode.css"/>
       <script src="hero-script.js" defer></script>
       <script src="script.js" defer></script>
+      <script src="dark_mode.js" defer></script>
+      <title>Agence Dev Web</title>
       <script src="translation.js" defer></script>
       <title>Huddle | Grow your community</title>
    </head>
@@ -17,10 +21,17 @@
          <div id="logo-calltoaction-container">
             <img src="images/logo.svg" id="huddle-logo" alt="Huddle Logo" title="Huddle Logo" />
             <a id="button-calltoaction-top">Try it free</a>
+            <div class="container">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider" id="slider"></span>
+              </label>
+           </div>
             <div id="language">
                <img src="images/fr-flag.svg" alt="French flag" title="Pick your language" id="flag">
             </div>
          </div>
+      
          <div class="header-content-container">
             <div class="left-text-hero">
                <h1>Build The Community Your Fans Will Love</h1>
@@ -40,6 +51,7 @@
                   title="Illustration de croquis"
                />
             </div>
+            
          </div>
          <a id="arrow-link">
             <svg
@@ -53,6 +65,7 @@
                />
             </svg>
          </a>
+         
       </header>
       <main id="main-section">
          <section class="divACote columnReverse">
@@ -220,5 +233,7 @@
             <div id="contenuPopup"></div>
          </div>
       </div>
+   
+     
    </body>
 </html>

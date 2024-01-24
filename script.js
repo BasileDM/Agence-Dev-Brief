@@ -78,6 +78,21 @@ document.addEventListener("click", function (event) {
     disparitionBoite();
   }
 });
+// let submit = document.getElementById("submit_button");
+// submit.innerHTML = "Bravo vous êtes enregistrés";
+// Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
+
+document.addEventListener('DOMContentLoaded', function() {
+   const toggleDarkModeButton = document.getElementById('slider');
+   const body = document.body;
+   const footer = document.footer;
+
+   toggleDarkModeButton.addEventListener('click', function() {
+       body.classList.toggle('dark-mode');
+       footer.classList.toggle('dark-mode');
+   });
+});
+
 
 function verifierLongueur(champFormulaire, longueurMin, longueurMax) {
   if (
