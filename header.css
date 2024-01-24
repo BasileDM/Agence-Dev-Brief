@@ -1,16 +1,20 @@
 header {
    height: 100svh;
+   min-height: 650px;
    background-image: url("images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
    background-size: cover;
    font-size: clamp(17px, 1.43vw, 40px);
 
+   #arrow-link {
+      position: absolute;
+      top: clamp(572px, 93%, 95%);
+      left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
+   }
+
    #arrow-image {
       fill: var(--Very_Dark_Cyan);
-      position: absolute;
-      top: calc(100svh - 3rem);
-      left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
       width: clamp(30px, 2.7vw, 100px);
       opacity: 80%;
       cursor: pointer;
@@ -84,6 +88,7 @@ h1 {
    /*Main image in the hero page content*/
    img {
       width: 100%;
+      max-height: 45svw;
       animation: animationImage 3s alternate;
    }
    p {

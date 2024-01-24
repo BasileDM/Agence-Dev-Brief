@@ -1,3 +1,4 @@
+/*#region Variables et Polices*/
 :root {
    --Pink: hsl(322, 100%, 66%);
    --Very_Pale_Cyan: hsl(193, 100%, 96%);
@@ -19,6 +20,7 @@
    font-family: "Poppins";
    src: url(fonts/Poppins-SemiBold.ttf);
 }
+/*#endregion*/
 
 body,
 html {
@@ -36,6 +38,7 @@ h3 {
    font-family: "Poppins";
 }
 
+/*#region Bouton Rose*/
 .boutonRose {
    padding: 18px 60px;
    border: none;
@@ -53,9 +56,10 @@ h3 {
 #anim-container-CTA {
    animation: animationBoutonRose 3s alternate;
 }
+/*#endregion*/
 
 /* A partir d'ici pour JAVASCRIPT */
-
+/*#region Popup*/
 .invisible {
    display: none;
 }
@@ -95,6 +99,7 @@ h3 {
 #closeButton {
    margin-left: 90%;
 }
+/*#endregion*/
 
 @keyframes animationBoutonRose {
    0% {
