@@ -9,7 +9,7 @@ header {
 
    #arrow-link {
       position: absolute;
-      top: clamp(540px, 93%, 95%);
+      top: calc(100svh - 50px);
       left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
    }
 
