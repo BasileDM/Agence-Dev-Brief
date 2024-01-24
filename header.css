@@ -39,9 +39,19 @@ h1 {
    padding: 10px 4rem;
 
    /*logo*/
-   img {
+   #huddle-logo {
       max-width: 300px;
       width: clamp(160px, 15svw, 400px);
+   }
+   #language {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+         width: 30px;
+         height: 30px;
+      }
    }
 }
 #button-calltoaction-top {
@@ -102,7 +112,7 @@ h1 {
       padding: 5px 15px;
 
       /*logo*/
-      img {
+      #huddle-logo {
          max-width: 30%;
       }
    }
