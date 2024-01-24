@@ -78,6 +78,7 @@ h3 {
    border-radius: 30px;
    box-shadow: 0 0 0px 5px var(--Pink);
    background-color: white;
+   animation: animationPopUp 0.1s ease-in;
 }
 
 #fondPopUp {
@@ -112,7 +113,34 @@ h3 {
    }
 }
 
+@keyframes animationPopUp {
+   0% {
+      transform: scale(0.5);
+      opacity: 0%;
+   }
+   100% {
+      transform: scale(1);
+      opacity: 100%;
+   }
+}
+
+#errorNom, #errorPrenom {
+   font-size: smaller;
+   border: 2px solid red;
+   animation: animationBoutonRose 2s alternate;
+   position: fixed;
+   top: 25%;
+   left: 40%;
+   background-color: var(--Very_Dark_Cyan);
+   color: var(--Pink);
+   padding: 9px
+
+}
+
+
+
 body,
 html {
    overflow: auto;
 }
+
