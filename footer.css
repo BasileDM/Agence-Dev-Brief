@@ -95,7 +95,7 @@ cursor: pointer;}
 
     @keyframes animationSocials {
       0% {
-         transform: translateX(225px);
+         transform: translateX(22px);
          scale: (5%)
          
       }
