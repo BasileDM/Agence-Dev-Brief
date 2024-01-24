@@ -1,6 +1,6 @@
 header {
    height: 100svh;
-   min-height: 640px;
+   min-height: 540px;
    background-image: url("images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
@@ -9,7 +9,7 @@ header {
 
    #arrow-link {
       position: absolute;
-      top: clamp(600px, 93%, 95%);
+      top: clamp(540px, 93%, 95%);
       left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
    }
 
