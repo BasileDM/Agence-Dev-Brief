@@ -7,8 +7,10 @@
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="main.css" />
       <link rel="stylesheet" href="footer.css" />
+      <link rel="stylesheet" href="dark_mode.css"/>
       <script src="hero-script.js" defer></script>
       <script src="script.js" defer></script>
+      <script src="dark_mode.js" defer></script>
       <title>Agence Dev Web</title>
    </head>
    <body>
@@ -16,7 +18,14 @@
          <div id="logo-calltoaction-container">
             <img src="images/logo.svg" alt="Huddle Logo" title="Huddle Logo" />
             <a id="button-calltoaction-top">Try it free</a>
+            <div class="container">
+               <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider" id="slider"></span>
+              </label>
+           </div>
          </div>
+      
          <div class="header-content-container">
             <div class="left-text-hero">
                <h1>Build The Community Your Fans Will Love</h1>
@@ -36,6 +45,7 @@
                   title="Illustration de croquis"
                />
             </div>
+            
          </div>
          <a id="arrow-link">
             <svg
@@ -49,6 +59,7 @@
                />
             </svg>
          </a>
+         
       </header>
       <main id="main-section">
          <section class="divACote columnReverse">
@@ -216,5 +227,7 @@
             <div id="contenuPopup"></div>
          </div>
       </div>
+   
+     
    </body>
 </html>
