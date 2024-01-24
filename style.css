@@ -1,3 +1,4 @@
+/*#region Variables et Polices*/
 :root {
    --Pink: hsl(322, 100%, 66%);
    --Very_Pale_Cyan: hsl(193, 100%, 96%);
@@ -19,21 +20,25 @@
    font-family: "Poppins";
    src: url(fonts/Poppins-SemiBold.ttf);
 }
+/*#endregion*/
 
-
-
-body, html {
+body,
+html {
    padding: 0;
    margin: 0;
    font-size: 18px;
-   font-family: 'OpenSans';
+   font-family: "OpenSans";
    font-size: clamp(17px, 1.43vw, 40px);
+   overflow: hidden;
 }
 
-h1, h2, h3 {
-   font-family: 'Poppins';
+h1,
+h2,
+h3 {
+   font-family: "Poppins";
 }
 
+/*#region Bouton Rose*/
 .boutonRose {
    padding: 18px 60px;
    border: none;
@@ -43,16 +48,18 @@ h1, h2, h3 {
    color: var(--Very_Pale_Cyan);
    font-family: "OpenSansBold";
    font-size: clamp(0.6rem, 1.1svw, 2rem);
-   animation: animationBoutonRose 3s alternate;
 }
 .boutonRose:hover {
    opacity: 0.7;
    cursor: pointer;
 }
-
+#anim-container-CTA {
+   animation: animationBoutonRose 3s alternate;
+}
+/*#endregion*/
 
 /* A partir d'ici pour JAVASCRIPT */
-
+/*#region Popup*/
 .invisible {
    display: none;
 }
@@ -62,15 +69,15 @@ h1, h2, h3 {
 }
 
 #popUp {
-z-index: 10;
-position: fixed;
-top: 40%;
-left: 40%;
-padding: 20px;
-border: 2px solid transparent;
-border-radius: 30px;
-box-shadow: 0 0 0px 5px var(--Pink);
-background-color: white;
+   z-index: 10;
+   position: fixed;
+   top: 40%;
+   left: 40%;
+   padding: 20px;
+   border: 2px solid transparent;
+   border-radius: 30px;
+   box-shadow: 0 0 0px 5px var(--Pink);
+   background-color: white;
 }
 
 #fondPopUp {
@@ -79,18 +86,33 @@ background-color: white;
    height: 100vh;
    top: 0;
    left: 0;
-   background-color:rgba(0, 0, 0, 0.60);   
+   background-color: rgba(0, 0, 0, 0.6);
    z-index: 9;
 }
 
+#submit_button {
+   font-size: large;
+   border-radius: 8px;
+   background-color: var(--Pink);
+}
+
+#closeButton {
+   margin-left: 90%;
+}
+/*#endregion*/
+
 @keyframes animationBoutonRose {
    0% {
-     transform: translateX(-500px);
-     scale: (5%)
-     
-  }
-  100% {
-     transform : translateX(0px);
-     scale: (100%);
-  }
- }
+      transform: translateX(-500px);
+      scale: (5%);
+   }
+   100% {
+      transform: translateX(0px);
+      scale: (100%);
+   }
+}
+
+body,
+html {
+   overflow: auto;
+}

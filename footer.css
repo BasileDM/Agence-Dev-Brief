@@ -1,108 +1,111 @@
+footer {
+   background-color: var(--Very_Dark_Cyan);
+   color: aliceblue;
+   padding: 7%;
+}
 
-footer{background-color: var(--Very_Dark_Cyan);
-color: aliceblue;
-padding: 7%;}
-
-.Copyright{
-  text-align: right;
-  
-  }
+.Copyright {
+   text-align: right;
+}
 
 #conteneur_iacs {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr 1fr;
 }
-#adresse{text-align: justify;}
-
-
-#tel, #mail, #adresse 
-  {
-    list-style: none;
-  }
-#about_us ul
-{
-  list-style:none;
-  
+#adresse {
+   text-align: justify;
 }
-#about:hover, #what:hover, #faq:hover, #career_2:hover, #blog:hover, #contact:hover
-{text-decoration: underline;
-cursor: pointer;}
 
+#tel,
+#mail,
+#adresse {
+   list-style: none;
+}
+#about_us ul {
+   list-style: none;
+}
+#about:hover,
+#what:hover,
+#faq:hover,
+#career_2:hover,
+#blog:hover,
+#contact:hover {
+   text-decoration: underline;
+   cursor: pointer;
+}
 
-
-#career ul
-{
-  list-style: none;
+#career ul {
+   list-style: none;
 }
 
 #socials ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
 }
-#socials ul li 
-  { 
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border:1px solid rgb(255, 252, 252);
-    border-radius: 100%;
-    animation: animationSocials 3s alternate
+#socials ul li {
+   padding: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid rgb(255, 252, 252);
+   border-radius: 100%;
+   animation: animationSocials 3s alternate;
 }
 
-#socials ul li:hover{
-border:1px solid hsl(322, 100%, 66%);
-cursor: pointer;}
+#socials ul li:hover {
+   border: 1px solid hsl(322, 100%, 66%);
+   cursor: pointer;
+}
 
+#socials ul li:hover svg {
+   fill: hsl(322, 100%, 66%);
+}
 
-#socials ul li:hover svg
-{
-  fill: hsl(322, 100%, 66%);}
+#tel:before,
+#mail:before,
+#adresse:before {
+   content: "";
+   background-size: 100%;
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   margin: 5px 0 0 -30px;
+}
 
-  #tel:before, #mail:before, #adresse:before{
-    content: "";
-    background-size: 100%;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    margin: 5px 0 0 -30px;}
+#tel:before {
+   background-image: url(images/icon_phone.svg);
+}
+#mail:before {
+   background-image: url(images/icon_email.svg);
+}
 
-    #tel:before {
-        background-image: url(images/icon_phone.svg);
-    
-      }
-      #mail:before {
-        background-image: url(images/icon_email.svg);
-      }
-    
-      #adresse:before {
-        background-image: url(images/icon_location.svg);
-      }
+#adresse:before {
+   background-image: url(images/icon_location.svg);
+}
 
-      li {
-        margin-top: 6px;
-      }
+li {
+   margin-top: 6px;
+}
 
-  @media screen and (max-width: 790px) {
-    #conteneur_iacs {
+@media screen and (max-width: 790px) {
+   #conteneur_iacs {
       display: grid;
-      grid-template-columns: 2fr;}
-    #logo {padding: 43% 0% 5% 0%;
-        scroll-margin-right: 30%;}
-        
-    }
-
-    @keyframes animationSocials {
-      0% {
-         transform: translateX(22px);
-         scale: (5%)
-         
-      }
-      100% {
-         transform : translateX(0px);
-         scale: (100%);
-      }
+      grid-template-columns: 2fr;
    }
-    
-  
+   #logo {
+      padding: 43% 0% 5% 0%;
+      scroll-margin-right: 30%;
+   }
+
+}
+@keyframes animationSocials {
+   0% {
+      transform: translateX(225px);
+      scale: (5%);
+   }
+   100% {
+      transform: translateX(0px);
+      scale: (100%);
+   }
+}
