@@ -1,6 +1,6 @@
 header {
    height: 100svh;
-   min-height: 650px;
+   min-height: 540px;
    background-image: url("images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
@@ -9,7 +9,7 @@ header {
 
    #arrow-link {
       position: absolute;
-      top: clamp(572px, 93%, 95%);
+      top: calc(100svh - 50px);
       left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
    }
 
@@ -39,9 +39,19 @@ h1 {
    padding: 10px 4rem;
 
    /*logo*/
-   img {
+   #huddle-logo {
       max-width: 300px;
       width: clamp(160px, 15svw, 400px);
+   }
+   #language {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+         width: 30px;
+         height: 30px;
+      }
    }
 }
 #button-calltoaction-top {
@@ -102,7 +112,7 @@ h1 {
       padding: 5px 15px;
 
       /*logo*/
-      img {
+      #huddle-logo {
          max-width: 30%;
       }
    }
@@ -138,8 +148,15 @@ h1 {
       }
    }
    header {
-      min-height: 650px;
+      min-height: 643px;
       background-image: url("images/bg_hero_mobile.svg");
+
+      #arrow-link {
+         position: absolute;
+         top: clamp(613px, 93%, 95%);
+         left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
+
+      }
    }
 }
 

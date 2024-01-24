@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="images/favicon_32_32.png">
       <link rel="stylesheet" href="header.css" />
       <link rel="stylesheet" href="style.css" />
       <link rel="stylesheet" href="main.css" />
@@ -12,11 +13,13 @@
       <script src="script.js" defer></script>
       <script src="dark_mode.js" defer></script>
       <title>Agence Dev Web</title>
+      <script src="translation.js" defer></script>
+      <title>Huddle | Grow your community</title>
    </head>
    <body>
       <header>
          <div id="logo-calltoaction-container">
-            <img src="images/logo.svg" alt="Huddle Logo" title="Huddle Logo" />
+            <img src="images/logo.svg" id="huddle-logo" alt="Huddle Logo" title="Huddle Logo" />
             <a id="button-calltoaction-top">Try it free</a>
             <div class="container">
                <label class="switch">
@@ -24,6 +27,9 @@
                   <span class="slider" id="slider"></span>
               </label>
            </div>
+            <div id="language">
+               <img src="images/fr-flag.svg" alt="French flag" title="Pick your language" id="flag">
+            </div>
          </div>
       
          <div class="header-content-container">
