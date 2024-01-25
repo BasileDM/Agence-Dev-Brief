@@ -28,7 +28,7 @@ const CTAFormulaire = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
 let boutonSubmit = document.getElementById("submit_button");
 let erreurNom = "Votre nom doit être entre 3 et 12 lettres";
-let erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés"
+let erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés";
 let erreurPrenom = "Votre prenom doit être entre 3 et 12 lettres";
 
 function apparitionBoite() {
@@ -56,16 +56,17 @@ function apparitionMessage(event) {
   console.log(prenomValide);
   if (nomValide == false && prenomValide == true) {
     RetourneMessageErreur(endroitErreurNom, erreurNom);
+  } else {
+    effacerMessageErreur(endroitErreurNom);
   }
-  else {effacerMessageErreur(endroitErreurNom);}
   if (prenomValide == false && nomValide == true) {
     RetourneMessageErreur(endroitErreurPrenom, erreurPrenom);
+  } else {
+    effacerMessageErreur(endroitErreurPrenom);
   }
-  else { effacerMessageErreur(endroitErreurPrenom); }
 
   if (prenomValide == false && nomValide == false) {
-    RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom)
-
+    RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom);
   }
 
   if (prenomValide == true && nomValide == true) {
@@ -110,4 +111,5 @@ function RetourneMessageErreur(endroitOuLeMettre, message) {
 }
 
 function effacerMessageErreur(endroitOuLeMettre) {
-endroitOuLeMettre.classList.replace("visible", "invisible");}
+  endroitOuLeMettre.classList.replace("visible", "invisible");
+}
