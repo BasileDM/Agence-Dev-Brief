@@ -40,11 +40,14 @@ h1 {
 
    /*logo*/
    .svg-logo-container {
-      max-width: 300px;
-      width: calc(15px + 0.8rem);
-      position: relative;
-      top: 50px;
-      left: 20px;
+      /* max-width: 300px; */
+      transform: 0.5;
+
+      #huddle-logo {
+         position: relative;
+         top: 60px;
+         left: 0px;
+      }
    } 
    #language {
       position: absolute;
@@ -114,8 +117,14 @@ h1 {
       padding: 12px 15px 5px 15px;
 
       /*logo*/
-      #huddle-logo {
-         max-width: 30%;
+      .svg-logo-container {
+         position: relative;
+         top: -2rem;
+         left: -2rem;
+         width: 100%;
+         #huddle-logo {
+            transform: scale(clamp(0.2, 0.5, 2));
+         }
       }
    }
    #button-calltoaction-top {

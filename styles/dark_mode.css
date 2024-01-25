@@ -14,8 +14,17 @@
    background-color: #333;
 }
 
-.dark-mode svg path {
-   fill: #fff;
+.dark-mode svg {
+   path {
+      fill: white;
+   }
+   #logo-red-buble {
+      fill: var(--Pink);
+   }
+   #logo-huddle-text {
+      fill: white;
+   }
+
 }
 
 .dark-mode footer {
@@ -36,7 +45,6 @@
 
 .dark-mode #popUp{
    background-color: #333;
-   font
 }
 .slider {
    background-color: #ffffff2b;
