@@ -40,9 +40,6 @@ h1 {
 
    /*logo*/
    .svg-logo-container {
-      /* max-width: 300px; */
-      transform: 0.5;
-
       #huddle-logo {
          position: relative;
          top: 60px;
@@ -118,12 +115,11 @@ h1 {
 
       /*logo*/
       .svg-logo-container {
-         position: relative;
-         top: -2rem;
-         left: -2rem;
-         width: 100%;
+         width: 100px;
          #huddle-logo {
             transform: scale(clamp(0.2, 0.5, 2));
+            left: -4rem;
+            top: 2rem;
          }
       }
    }
@@ -168,6 +164,16 @@ h1 {
          left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
 
       }
+   }
+}
+@media screen and (min-width: 1980px) {
+   .svg-logo-container {
+      position: relative;
+      top: 2rem;
+      left: 4rem;
+   }
+   #huddle-logo {
+      transform: scale(2);
    }
 }
 
