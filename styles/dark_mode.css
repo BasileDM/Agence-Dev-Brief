@@ -22,7 +22,14 @@
 .dark-mode #tel #mail #adresse {
    background-color: #333;
 }
+.dark-mode .divACote{
+   box-shadow: 0 0 10px 5px #525151;
+}
 
+.dark-mode #popUp{
+   background-color: #333;
+   font
+}
 .slider {
    background-color: #ffffff2b;
    border-radius: 100px;
