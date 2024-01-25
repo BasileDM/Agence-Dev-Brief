@@ -14,20 +14,32 @@
    background-color: #333;
 }
 
-.dark-mode svg path {
-   fill: #fff;
+.dark-mode svg {
+   path {
+      fill: white;
+   }
+   #logo-red-buble {
+      fill: var(--Pink);
+   }
+   #logo-huddle-text {
+      fill: white;
+   }
+
 }
 
-.dark-mode footer {
-   background-color: white;
-   color: var(--Very_Dark_Cyan);
-}
+.dark-mode #boiteGetReady{
 
-.dark-mode #socials svg {
    background-color: #333;
+   box-shadow: 0 0 10px 5px #525151;
+}
+.dark-mode footer {
+   box-shadow: 0 0 10px 5px #525151;
+   background-color: #333;
+   color: #fff;
 }
 
-.dark-mode #tel #mail #adresse {
+
+.dark-mode #tel #mail #adresse svg{
    background-color: #333;
 }
 .dark-mode .divACote{
@@ -36,7 +48,6 @@
 
 .dark-mode #popUp{
    background-color: #333;
-   font
 }
 .slider {
    background-color: #ffffff2b;

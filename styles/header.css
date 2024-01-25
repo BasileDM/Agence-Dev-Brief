@@ -40,11 +40,11 @@ h1 {
 
    /*logo*/
    .svg-logo-container {
-      max-width: 300px;
-      width: calc(15px + 0.8rem);
-      position: relative;
-      top: 50px;
-      left: 20px;
+      #huddle-logo {
+         position: relative;
+         top: 60px;
+         left: 0px;
+      }
    } 
    #language {
       position: absolute;
@@ -114,8 +114,13 @@ h1 {
       padding: 12px 15px 5px 15px;
 
       /*logo*/
-      #huddle-logo {
-         max-width: 30%;
+      .svg-logo-container {
+         width: 100px;
+         #huddle-logo {
+            transform: scale(clamp(0.2, 0.5, 2));
+            left: -4rem;
+            top: 2rem;
+         }
       }
    }
    #button-calltoaction-top {
@@ -159,6 +164,16 @@ h1 {
          left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
 
       }
+   }
+}
+@media screen and (min-width: 1980px) {
+   .svg-logo-container {
+      position: relative;
+      top: 2rem;
+      left: 4rem;
+   }
+   #huddle-logo {
+      transform: scale(2);
    }
 }
 
