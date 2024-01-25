@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const footer = document.footer;
     const header = document.header;
  
-    toggleDarkModeButton.addEventListener('click', function() {
+    toggleDarkModeButton.addEventListener('click', function darkMode() {
         body.classList.toggle('dark-mode');
         footer.classList.toggle('dark-mode');
         header.classList.toggle('dark-mode');

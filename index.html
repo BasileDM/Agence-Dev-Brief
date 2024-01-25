@@ -13,6 +13,7 @@
       <script src="scripts/script.js" defer></script>
       <script src="scripts/dark_mode.js" defer></script>
       <script src="scripts/translation.js" defer></script>
+      <script src="scripts/kb-access.js" defer></script>
       <title>Huddle | Grow</title>
    </head>
    <body>
@@ -35,14 +36,14 @@
                   </g>
                </svg>
             </div>
-            <a id="button-calltoaction-top">Try it free</a>
-            <div class="dark-mode-container">
+            <a id="button-calltoaction-top" tabindex="4">Try it free</a>
+            <div class="dark-mode-container" tabindex="1" onkeyup="onKeyUp(event, 2)">
                <label class="switch">
                   <input type="checkbox" />
                   <span class="slider" id="slider"></span>
                </label>
             </div>
-            <div id="language">
+            <div id="language" tabindex="2">
                <img
                   src="images/en-flag.svg"
                   alt="French flag"
@@ -61,7 +62,7 @@
                   users as you engage in genuine discussion.
                </p>
                <div id="anim-container-CTA">
-                  <a class="boutonRose">Get Started For Free</a>
+                  <a class="boutonRose" tabindex="4">Get Started For Free</a>
                </div>
             </div>
             <div id="header-content-image-container">
@@ -72,7 +73,7 @@
                />
             </div>
          </div>
-         <a id="arrow-link">
+         <a id="arrow-link" tabindex="5">
             <svg
                id="arrow-image"
                xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +143,7 @@
 
          <div id="boiteGetReady">
             <h2>Ready To Build Your Community?</h2>
-            <a id="CTA-formulaire" class="boutonRose"> Get Started for Free </a>
+            <a id="CTA-formulaire" class="boutonRose" tabindex="6" onkeyup="onKeyUp(event, 1)"> Get Started for Free </a>
          </div>
       </main>
       <footer>
@@ -181,21 +182,21 @@
             </div>
             <div id="about_us" class="about us">
                <ul>
-                  <li id="about">About Us</li>
-                  <li id="what">What We Do</li>
-                  <li id="faq">FAQ</li>
+                  <li id="about" tabindex="10">About Us</li>
+                  <li id="what" tabindex="11">What We Do</li>
+                  <li id="faq" tabindex="12">FAQ</li>
                </ul>
             </div>
             <div id="career" class="career">
                <ul>
-                  <li id="career_2">Career</li>
-                  <li id="blog">Blog</li>
-                  <li id="contact">Contact Us</li>
+                  <li id="career_2" tabindex="13">Career</li>
+                  <li id="blog" tabindex="14">Blog</li>
+                  <li id="contact" tabindex="15">Contact Us</li>
                </ul>
             </div>
             <div id="socials" class="socials">
                <ul>
-                  <li id="facebook">
+                  <li id="facebook" tabindex="7">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
@@ -210,7 +211,7 @@
                      </svg>
                   </li>
 
-                  <li id="twitter">
+                  <li id="twitter" tabindex="8">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
@@ -225,7 +226,7 @@
                      </svg>
                   </li>
 
-                  <li id="instagram">
+                  <li id="instagram" tabindex="9">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
