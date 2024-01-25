@@ -8,17 +8,17 @@
 
 @font-face {
   font-family: "OpenSans";
-  src: url(fonts/OpenSans-Regular.ttf);
+  src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "OpenSansBold";
-  src: url(fonts/OpenSans-Bold.ttf);
+  src: url(../fonts/OpenSans-Bold.ttf);
 }
 
 @font-face {
   font-family: "Poppins";
-  src: url(fonts/Poppins-SemiBold.ttf);
+  src: url(../fonts/Poppins-SemiBold.ttf);
 }
 /*#endregion*/
 
