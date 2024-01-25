@@ -55,17 +55,20 @@ function apparitionMessage(event) {
   console.log(nomValide);
   console.log(prenomValide);
   if (nomValide == false && prenomValide == true) {
+    jouerSon();
     RetourneMessageErreur(endroitErreurNom, erreurNom);
   } else {
     effacerMessageErreur(endroitErreurNom);
   }
   if (prenomValide == false && nomValide == true) {
+    jouerSon();
     RetourneMessageErreur(endroitErreurPrenom, erreurPrenom);
   } else {
     effacerMessageErreur(endroitErreurPrenom);
   }
 
   if (prenomValide == false && nomValide == false) {
+    jouerSon();
     RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom);
   }
 
@@ -112,4 +115,9 @@ function RetourneMessageErreur(endroitOuLeMettre, message) {
 
 function effacerMessageErreur(endroitOuLeMettre) {
   endroitOuLeMettre.classList.replace("visible", "invisible");
+}
+
+function jouerSon(){
+    let audio = new Audio("images/Wiz.wav");
+    audio.play();
 }
