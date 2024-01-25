@@ -7,7 +7,15 @@
 
 .dark-mode {
    background-color: #333;
-   color: var(--Grayish_Blue);
+   color: white;
+}
+
+.dark-mode header {
+   background-color: #333;
+}
+
+.dark-mode svg path {
+   fill: #fff;
 }
 
 .dark-mode footer {
