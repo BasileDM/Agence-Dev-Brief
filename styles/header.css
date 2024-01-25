@@ -46,11 +46,10 @@ h1 {
    #language {
       position: absolute;
       top: 0;
-      right: 0;
+      right: 4px;
 
       img {
-         width: 30px;
-         height: 30px;
+         width: calc(15px + 0.8rem);
       }
    }
 }
@@ -109,7 +108,7 @@ h1 {
 @media screen and (max-width: 790px) {
    #logo-calltoaction-container {
       height: 4rem;
-      padding: 5px 15px;
+      padding: 12px 15px 5px 15px;
 
       /*logo*/
       #huddle-logo {

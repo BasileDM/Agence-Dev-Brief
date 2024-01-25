@@ -14,7 +14,7 @@ let translationArray = [
    [
       document.querySelector("header h1"),
       "Build The Community Your Fans Will Love",
-      "Construisez une communauté inoubliable",
+      "Concevez Le Réseau Adoré De Vos Fans",
    ],
    [
       document.querySelector("header p"),
