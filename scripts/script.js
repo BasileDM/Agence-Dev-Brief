@@ -5,12 +5,12 @@ let formulaire = `
    <div class="field">
       <label for="nom" >Nom*  </label>
       <input placeholder="Gardin" type="text" name="nom" id="nom" required />
-      <p id="errorNom" class="invisible"> </p>
+      <p class="invisible"> </p>
    </div>
    <div class="field">
       <label for="prenom">Prénom*  </label>
       <input placeholder="Blanche" type="text" name="prenom" id="prenom" required />
-      <p id="errorPrenom" class="invisible"> </p>
+      <p class="invisible"> </p>
    </div>
    <div class="field">
       <label for="mail">E-Mail*  </label>
@@ -45,32 +45,27 @@ function disparitionBoite() {
 }
 
 function apparitionMessage(event) {
-   event.preventDefault();
-   let champNom = document.getElementById("nom");
-   let champPrenom = document.getElementById("prenom");
-   let nomValide = verifierLongueur(champNom, 2, 12);
-   let prenomValide = verifierLongueur(champPrenom, 2, 12);
-   let endroitErreurNom = document.getElementById("errorNom");
-   let endroitErreurPrenom = document.getElementById("errorPrenom");
-   console.log(nomValide);
-   console.log(prenomValide);
-   if (nomValide == false && prenomValide == true) {
+  event.preventDefault();
+  let champNom = document.getElementById("nom");
+  let champPrenom = document.getElementById("prenom");
+  let nomValide = verifierLongueur(champNom, 2, 12);
+  let prenomValide = verifierLongueur(champPrenom, 2, 12);
+  let endroitErreur = document.getElementById("endroitMessage");
+  console.log(nomValide);
+  console.log(prenomValide);
+  if (nomValide == false && prenomValide == true) {
+    console.log('erreur 1')
+    jouerSon();
+    RetourneMessageErreur(endroitErreur, erreurNom);
+  } else if (prenomValide == false && nomValide == true) {
       jouerSon();
-      RetourneMessageErreur(endroitErreurNom, erreurNom);
-   } else {
-      effacerMessageErreur(endroitErreurNom);
-   }
-   if (prenomValide == false && nomValide == true) {
+      RetourneMessageErreur(endroitErreur, erreurPrenom);
+  } else if (prenomValide == false && nomValide == false) {
       jouerSon();
-      RetourneMessageErreur(endroitErreurPrenom, erreurPrenom);
-   } else {
-      effacerMessageErreur(endroitErreurPrenom);
-   }
-
-   if (prenomValide == false && nomValide == false) {
-      jouerSon();
-      RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom);
-   }
+      RetourneMessageErreur(endroitErreur, erreurNomEtPrenom);
+  } else {
+      effacerMessageErreur(endroitErreur);
+  }
 
    if (prenomValide == true && nomValide == true) {
       setTimeout(() => {
@@ -89,9 +84,6 @@ document.addEventListener("click", function (event) {
       disparitionBoite();
    }
 });
-// let submit = document.getElementById("submit_button");
-// submit.innerHTML = "Bravo vous êtes enregistrés";
-// Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
 
 function verifierLongueur(champFormulaire, longueurMin, longueurMax) {
    if (
@@ -117,7 +109,8 @@ function effacerMessageErreur(endroitOuLeMettre) {
    endroitOuLeMettre.classList.replace("visible", "invisible");
 }
 
-function jouerSon() {
-   let audio = new Audio("images/Wiz.wav");
-   audio.play();
-}
+function jouerSon(){
+    let audio = new Audio("images/Wiz.mp3");
+    audio.play();}
+
+  
