@@ -32,92 +32,92 @@ let erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés";
 let erreurPrenom = "Votre prenom doit être entre 3 et 12 lettres";
 
 function apparitionBoite() {
-  contenuPopup.innerHTML = formulaire;
-  setTimeout(() => {
-    popUp.classList.replace("invisible", "visible");
-    fondPopUp.classList.replace("invisible", "visible");
-  }, 10);
+   contenuPopup.innerHTML = formulaire;
+   setTimeout(() => {
+      popUp.classList.replace("invisible", "visible");
+      fondPopUp.classList.replace("invisible", "visible");
+   }, 10);
 }
 
 function disparitionBoite() {
-  popUp.classList.replace("visible", "invisible");
-  fondPopUp.classList.replace("visible", "invisible");
+   popUp.classList.replace("visible", "invisible");
+   fondPopUp.classList.replace("visible", "invisible");
 }
 
 function apparitionMessage(event) {
-  event.preventDefault();
-  let champNom = document.getElementById("nom");
-  let champPrenom = document.getElementById("prenom");
-  let nomValide = verifierLongueur(champNom, 2, 12);
-  let prenomValide = verifierLongueur(champPrenom, 2, 12);
-  let endroitErreurNom = document.getElementById("errorNom");
-  let endroitErreurPrenom = document.getElementById("errorPrenom");
-  console.log(nomValide);
-  console.log(prenomValide);
-  if (nomValide == false && prenomValide == true) {
-    jouerSon();
-    RetourneMessageErreur(endroitErreurNom, erreurNom);
-  } else {
-    effacerMessageErreur(endroitErreurNom);
-  }
-  if (prenomValide == false && nomValide == true) {
-    jouerSon();
-    RetourneMessageErreur(endroitErreurPrenom, erreurPrenom);
-  } else {
-    effacerMessageErreur(endroitErreurPrenom);
-  }
+   event.preventDefault();
+   let champNom = document.getElementById("nom");
+   let champPrenom = document.getElementById("prenom");
+   let nomValide = verifierLongueur(champNom, 2, 12);
+   let prenomValide = verifierLongueur(champPrenom, 2, 12);
+   let endroitErreurNom = document.getElementById("errorNom");
+   let endroitErreurPrenom = document.getElementById("errorPrenom");
+   console.log(nomValide);
+   console.log(prenomValide);
+   if (nomValide == false && prenomValide == true) {
+      jouerSon();
+      RetourneMessageErreur(endroitErreurNom, erreurNom);
+   } else {
+      effacerMessageErreur(endroitErreurNom);
+   }
+   if (prenomValide == false && nomValide == true) {
+      jouerSon();
+      RetourneMessageErreur(endroitErreurPrenom, erreurPrenom);
+   } else {
+      effacerMessageErreur(endroitErreurPrenom);
+   }
 
-  if (prenomValide == false && nomValide == false) {
-    jouerSon();
-    RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom);
-  }
+   if (prenomValide == false && nomValide == false) {
+      jouerSon();
+      RetourneMessageErreur(endroitErreurNom, erreurNomEtPrenom);
+   }
 
-  if (prenomValide == true && nomValide == true) {
-    setTimeout(() => {
-      contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
-    }, 10);
-    setTimeout(() => {
-      disparitionBoite();
-    }, 5000);
-  }
+   if (prenomValide == true && nomValide == true) {
+      setTimeout(() => {
+         contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
+      }, 10);
+      setTimeout(() => {
+         disparitionBoite();
+      }, 5000);
+   }
 }
 
 CTAFormulaire.addEventListener("click", apparitionBoite);
 croixBouton.addEventListener("click", disparitionBoite);
 document.addEventListener("click", function (event) {
-  if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
-    disparitionBoite();
-  }
+   if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
+      disparitionBoite();
+   }
 });
 // let submit = document.getElementById("submit_button");
 // submit.innerHTML = "Bravo vous êtes enregistrés";
 // Quand questionnaire rempli > soumettre et la div met message 'bravo vous êtes enregistré'
 
 function verifierLongueur(champFormulaire, longueurMin, longueurMax) {
-  if (
-    champFormulaire.value.length < longueurMax &&
-    champFormulaire.value.length > longueurMin
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+   if (
+      champFormulaire.value.length < longueurMax &&
+      champFormulaire.value.length > longueurMin
+   ) {
+      return true;
+   } else {
+      return false;
+   }
 }
 
 function RetourneMessageErreur(endroitOuLeMettre, message) {
-  endroitOuLeMettre.innerText = message;
-  endroitOuLeMettre.classList.replace("invisible", "visible");
-  let espaceChamps = document.getElementsByClassName("field");
-  for (element of espaceChamps) {
-    element.style.flexDirection = "column";
-  }
+   endroitOuLeMettre.innerText = message;
+   endroitOuLeMettre.classList.replace("invisible", "visible");
+   let espaceChamps = document.getElementsByClassName("field");
+   for (element of espaceChamps) {
+      element.style.flexDirection = "column";
+   }
 }
 
 function effacerMessageErreur(endroitOuLeMettre) {
-  endroitOuLeMettre.classList.replace("visible", "invisible");
+   endroitOuLeMettre.classList.replace("visible", "invisible");
 }
 
-function jouerSon(){
-    let audio = new Audio("images/Wiz.wav");
-    audio.play();
+function jouerSon() {
+   let audio = new Audio("images/Wiz.wav");
+   audio.play();
 }

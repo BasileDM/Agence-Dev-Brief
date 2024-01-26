@@ -1,20 +1,20 @@
-// Expressing the function outside 
+// Expressing the function outside
 // to be able to call it with onkeyup
-let darkModeToggle; 
+let darkModeToggle;
 
 function darkMode() {
-    const toggleDarkModeButton = document.getElementById('slider');
-    const body = document.body;
-    const footer = document.footer;
-    const header = document.header;
- 
-    darkModeToggle = function() {
-        body.classList.toggle('dark-mode');
-        footer.classList.toggle('dark-mode');
-        header.classList.toggle('dark-mode');
-    }
+   const toggleDarkModeButton = document.getElementById("slider");
+   const body = document.body;
+   const footer = document.footer;
+   const header = document.header;
 
-    toggleDarkModeButton.addEventListener('click', darkModeToggle);
- }
+   darkModeToggle = function () {
+      body.classList.toggle("dark-mode");
+      footer.classList.toggle("dark-mode");
+      header.classList.toggle("dark-mode");
+   };
 
-document.addEventListener('DOMContentLoaded', darkMode);
+   toggleDarkModeButton.addEventListener("click", darkModeToggle);
+}
+
+document.addEventListener("DOMContentLoaded", darkMode);

@@ -1,28 +1,28 @@
 footer {
-  background-color: var(--Very_Dark_Cyan);
-  color: aliceblue;
-  padding: 7%;
+   background-color: var(--Very_Dark_Cyan);
+   color: aliceblue;
+   padding: 7%;
 }
 
 .Copyright {
-  text-align: right;
+   text-align: right;
 }
 
 #conteneur_iacs {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr 1fr;
 }
 #adresse {
-  text-align: justify;
+   text-align: justify;
 }
 
 #tel,
 #mail,
 #adresse {
-  list-style: none;
+   list-style: none;
 }
 #about_us ul {
-  list-style: none;
+   list-style: none;
 }
 #about:hover,
 #what:hover,
@@ -30,88 +30,88 @@ footer {
 #career_2:hover,
 #blog:hover,
 #contact:hover {
-  text-decoration: underline;
-  cursor: pointer;
+   text-decoration: underline;
+   cursor: pointer;
 }
 
 #career ul {
-  list-style: none;
+   list-style: none;
 }
 
 #socials ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
+   list-style: none;
+   display: flex;
+   justify-content: space-evenly;
 }
 #socials ul li {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(255, 252, 252);
-  border-radius: 100%;
-  animation: animationSocials 3s alternate;
+   padding: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid rgb(255, 252, 252);
+   border-radius: 100%;
+   animation: animationSocials 3s alternate;
 }
 
 #socials ul li:hover {
-  border: 1px solid hsl(322, 100%, 66%);
-  cursor: pointer;
+   border: 1px solid hsl(322, 100%, 66%);
+   cursor: pointer;
 }
 
 #socials ul li:hover svg {
-  fill: hsl(322, 100%, 66%);
+   fill: hsl(322, 100%, 66%);
 }
 
 #tel:before,
 #mail:before,
 #adresse:before {
-  content: "";
-  background-size: 100%;
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  margin: 5px 0 0 -30px;
+   content: "";
+   background-size: 100%;
+   width: 15px;
+   height: 15px;
+   position: absolute;
+   margin: 5px 0 0 -30px;
 }
 
 #tel:before {
-  background-image: url(../images/icon_phone.svg);
+   background-image: url(../images/icon_phone.svg);
 }
 #mail:before {
-  background-image: url(../images/icon_email.svg);
-  margin-top: 12px;
-  height: 12px;
+   background-image: url(../images/icon_email.svg);
+   margin-top: 12px;
+   height: 12px;
 }
 
 #adresse:before {
-  background-image: url(../images/icon_location.svg);
-  height: 20px;
+   background-image: url(../images/icon_location.svg);
+   height: 20px;
 }
 
 li {
-  margin-top: 6px;
+   margin-top: 6px;
 }
 
 @media screen and (max-width: 790px) {
-  #conteneur_iacs {
-    display: grid;
-    grid-template-columns: 2fr;
-  }
-  #logo {
-    padding: 43% 0% 5% 0%;
-    scroll-margin-right: 30%;
-  }
+   #conteneur_iacs {
+      display: grid;
+      grid-template-columns: 2fr;
+   }
+   #logo {
+      padding: 43% 0% 5% 0%;
+      scroll-margin-right: 30%;
+   }
 
-  #mail:before {
-    margin-top: 7px;
-  }
+   #mail:before {
+      margin-top: 7px;
+   }
 }
 @keyframes animationSocials {
-  0% {
-    transform: translateX(225px);
-    scale: (5%);
-  }
-  100% {
-    transform: translateX(0px);
-    scale: (100%);
-  }
+   0% {
+      transform: translateX(225px);
+      scale: (5%);
+   }
+   100% {
+      transform: translateX(0px);
+      scale: (100%);
+   }
 }

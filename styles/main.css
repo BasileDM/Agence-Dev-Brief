@@ -68,12 +68,12 @@ main p {
    }
 }
 
-.field input{
-  width: auto;
-  margin-left: auto;
+.field input {
+   width: auto;
+   margin-left: auto;
 }
 
 .field {
-  display: flex;
-  width: 100%;
+   display: flex;
+   width: 100%;
 }
