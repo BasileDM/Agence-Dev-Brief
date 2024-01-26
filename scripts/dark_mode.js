@@ -10,8 +10,6 @@ function darkMode() {
 
    darkModeToggle = function () {
       body.classList.toggle("dark-mode");
-      footer.classList.toggle("dark-mode");
-      header.classList.toggle("dark-mode");
    };
 
    toggleDarkModeButton.addEventListener("click", darkModeToggle);
