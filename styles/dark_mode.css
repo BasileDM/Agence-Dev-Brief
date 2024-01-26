@@ -38,6 +38,12 @@
    color: #fff;
 }
 
+.dark-mode #socials ul li path:hover  {
+fill: var(--pink) ;
+}
+
+.dark-mode #socials ul li:hover {
+   border: 1px solid hsl(322, 100%, 66%);}
 
 .dark-mode #tel #mail #adresse svg{
    background-color: #333;
