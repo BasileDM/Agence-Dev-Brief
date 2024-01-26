@@ -22,8 +22,8 @@ main p {
 
 #boiteGetReady {
    background-color: white;
-   height: 160px;
-   padding-bottom: 70px;
+   height: 13svw;
+   padding-bottom: 0px;
    transform: translateY(70px);
    z-index: 1;
    position: relative;
@@ -58,9 +58,9 @@ main p {
    }
    #boiteGetReady {
       left: 3%;
-      padding-top: 8%;
+      padding-top: 0;
       padding-bottom: 0px;
-      margin-top: 20%;
+      margin-top: -10%;
       transform: translateY(88px);
       height: 200px;
       text-align: center;
@@ -68,12 +68,12 @@ main p {
    }
 }
 
-.field input{
-  width: auto;
-  margin-left: auto;
+.field input {
+   width: auto;
+   margin-left: auto;
 }
 
 .field {
-  display: flex;
-  width: 100%;
+   display: flex;
+   width: 100%;
 }
