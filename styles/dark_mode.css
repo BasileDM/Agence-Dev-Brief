@@ -24,11 +24,9 @@
    #logo-huddle-text {
       fill: white;
    }
-
 }
 
-.dark-mode #boiteGetReady{
-
+.dark-mode #boiteGetReady {
    background-color: #333;
    box-shadow: 0 0 10px 5px #525151;
 }
@@ -38,15 +36,14 @@
    color: #fff;
 }
 
-
-.dark-mode #tel #mail #adresse svg{
+.dark-mode #tel #mail #adresse svg {
    background-color: #333;
 }
-.dark-mode .divACote{
+.dark-mode .divACote {
    box-shadow: 0 0 10px 5px #525151;
 }
 
-.dark-mode #popUp{
+.dark-mode #popUp {
    background-color: #333;
 }
 .slider {

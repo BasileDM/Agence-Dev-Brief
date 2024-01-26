@@ -13,13 +13,14 @@
       <script src="scripts/script.js" defer></script>
       <script src="scripts/dark_mode.js" defer></script>
       <script src="scripts/translation.js" defer></script>
+      <script src="scripts/kb-access.js" defer></script>
       <title>Huddle | Grow</title>
    </head>
    <body>
       <header>
          <div id="logo-calltoaction-container">
             <!-- <img src="images/logo.svg" id="huddle-logo" alt="Huddle Logo" title="Huddle Logo" /> -->
-            <div class="svg-logo-container">
+            <div class="svg-logo-container" title="Huddle logo">
                <svg id="huddle-logo" xmlns="http://www.w3.org/2000/svg">
                   <g fill-rule="nonzero" fill="none">
                      <path
@@ -35,18 +36,29 @@
                   </g>
                </svg>
             </div>
-            <a id="button-calltoaction-top">Try it free</a>
-            <div class="dark-mode-container">
+            <a
+               id="button-calltoaction-top"
+               tabindex="3"
+               title="Try free"
+               onkeyup="onKeyUp(event, 3)"
+               >Try it free</a
+            >
+            <div
+               class="dark-mode-container"
+               tabindex="1"
+               onkeyup="onKeyUp(event, 1)"
+               title="Dark/Light mode"
+            >
                <label class="switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" id="dark-mode-checkbox"/>
                   <span class="slider" id="slider"></span>
                </label>
             </div>
-            <div id="language">
+            <div id="language" tabindex="2" onkeyup="onKeyUp(event, 2)">
                <img
                   src="images/en-flag.svg"
                   alt="French flag"
-                  title="Pick your language"
+                  title="Switch language"
                   id="flag"
                />
             </div>
@@ -61,18 +73,20 @@
                   users as you engage in genuine discussion.
                </p>
                <div id="anim-container-CTA">
-                  <a class="boutonRose">Get Started For Free</a>
+                  <a class="boutonRose" tabindex="4" onkeyup="onKeyUp(event, 4)" title="Get started for free"
+                     >Get Started For Free</a
+                  >
                </div>
             </div>
             <div id="header-content-image-container">
                <img
                   src="images/illustration_mockups.svg"
-                  alt="Illustration de croquis"
-                  title="Illustration de croquis"
+                  alt="An illustration of a discussion"
+                  title="An illustration of a discussion"
                />
             </div>
          </div>
-         <a id="arrow-link">
+         <a id="arrow-link" tabindex="5" onkeyup="onKeyUp(event, 5)">
             <svg
                id="arrow-image"
                xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +113,8 @@
                <img
                   class="tailleImage"
                   src="images/illustration_grow_together.svg"
-                  alt="a man and a woman are working together"
+                  alt="A man and a woman working together"
+                  title="A man and a woman working together"
                />
             </div>
          </section>
@@ -109,7 +124,8 @@
                <img
                   class="tailleImage"
                   src="images/illustration_flowing_conversation.svg"
-                  alt="people are talking around a table"
+                  alt="A drawing of people having a nice conversation around a table"
+                  title="People having a nice conversation around a table"
                />
             </div>
             <div class="espaceTousLesCotes">
@@ -135,14 +151,23 @@
                <img
                   class="tailleImage"
                   src="images/illustration_your_users.svg"
-                  alt="3 people are hanging some boards"
+                  alt="Three people holding discussion bubbles"
+                  title="A drawing of three people holding discussion bubbles"
                />
             </div>
          </section>
 
          <div id="boiteGetReady">
             <h2>Ready To Build Your Community?</h2>
-            <a id="CTA-formulaire" class="boutonRose"> Get Started for Free </a>
+            <a
+               id="CTA-formulaire"
+               class="boutonRose"
+               title="get started for free"
+               tabindex="6"
+               onkeyup="onKeyUp(event, 6)"
+            >
+               Get Started for Free
+            </a>
          </div>
       </main>
       <footer>
@@ -181,21 +206,21 @@
             </div>
             <div id="about_us" class="about us">
                <ul>
-                  <li id="about">About Us</li>
-                  <li id="what">What We Do</li>
-                  <li id="faq">FAQ</li>
+                  <li id="about" tabindex="10">About Us</li>
+                  <li id="what" tabindex="11">What We Do</li>
+                  <li id="faq" tabindex="12">FAQ</li>
                </ul>
             </div>
             <div id="career" class="career">
                <ul>
-                  <li id="career_2">Career</li>
-                  <li id="blog">Blog</li>
-                  <li id="contact">Contact Us</li>
+                  <li id="career_2" tabindex="13">Career</li>
+                  <li id="blog" tabindex="14">Blog</li>
+                  <li id="contact" tabindex="15">Contact Us</li>
                </ul>
             </div>
-            <div id="socials" class="socials">
+            <div id="socials" class="socials"  title="Join us on facebook">
                <ul>
-                  <li id="facebook">
+                  <li id="facebook" tabindex="7">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
@@ -210,7 +235,7 @@
                      </svg>
                   </li>
 
-                  <li id="twitter">
+                  <li id="twitter" tabindex="8" title="Join us on twitter">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
@@ -225,7 +250,7 @@
                      </svg>
                   </li>
 
-                  <li id="instagram">
+                  <li id="instagram" tabindex="9" title="Join us on instagram">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"

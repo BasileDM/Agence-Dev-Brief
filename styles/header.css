@@ -1,11 +1,11 @@
 header {
    height: 100svh;
    min-height: 540px;
+   font-size: clamp(17px, 1.43vw, 40px);
    background-image: url("../images/bg_hero_desktop.svg");
    background-color: var(--Very_Pale_Cyan);
    background-repeat: no-repeat;
    background-size: cover;
-   font-size: clamp(17px, 1.43vw, 40px);
 
    #arrow-link {
       position: absolute;
@@ -45,7 +45,7 @@ h1 {
          top: 60px;
          left: 0px;
       }
-   } 
+   }
    #language {
       position: absolute;
       top: 0;
@@ -162,7 +162,6 @@ h1 {
          position: absolute;
          top: clamp(613px, 93%, 95%);
          left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
-
       }
    }
 }

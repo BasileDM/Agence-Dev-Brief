@@ -32,16 +32,16 @@ let erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés";
 let erreurPrenom = "Votre prenom doit être entre 3 et 12 lettres";
 
 function apparitionBoite() {
-  contenuPopup.innerHTML = formulaire;
-  setTimeout(() => {
-    popUp.classList.replace("invisible", "visible");
-    fondPopUp.classList.replace("invisible", "visible");
-  }, 10);
+   contenuPopup.innerHTML = formulaire;
+   setTimeout(() => {
+      popUp.classList.replace("invisible", "visible");
+      fondPopUp.classList.replace("invisible", "visible");
+   }, 10);
 }
 
 function disparitionBoite() {
-  popUp.classList.replace("visible", "invisible");
-  fondPopUp.classList.replace("visible", "invisible");
+   popUp.classList.replace("visible", "invisible");
+   fondPopUp.classList.replace("visible", "invisible");
 }
 
 function apparitionMessage(event) {
@@ -67,46 +67,46 @@ function apparitionMessage(event) {
       effacerMessageErreur(endroitErreur);
   }
 
-  if (prenomValide == true && nomValide == true) {
-    setTimeout(() => {
-      contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
-    }, 10);
-    setTimeout(() => {
-      disparitionBoite();
-    }, 5000);
-  }
+   if (prenomValide == true && nomValide == true) {
+      setTimeout(() => {
+         contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
+      }, 10);
+      setTimeout(() => {
+         disparitionBoite();
+      }, 5000);
+   }
 }
 
 CTAFormulaire.addEventListener("click", apparitionBoite);
 croixBouton.addEventListener("click", disparitionBoite);
 document.addEventListener("click", function (event) {
-  if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
-    disparitionBoite();
-  }
+   if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
+      disparitionBoite();
+   }
 });
 
 function verifierLongueur(champFormulaire, longueurMin, longueurMax) {
-  if (
-    champFormulaire.value.length < longueurMax &&
-    champFormulaire.value.length > longueurMin
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+   if (
+      champFormulaire.value.length < longueurMax &&
+      champFormulaire.value.length > longueurMin
+   ) {
+      return true;
+   } else {
+      return false;
+   }
 }
 
 function RetourneMessageErreur(endroitOuLeMettre, message) {
-  endroitOuLeMettre.innerText = message;
-  endroitOuLeMettre.classList.replace("invisible", "visible");
-  let espaceChamps = document.getElementsByClassName("field");
-  for (element of espaceChamps) {
-    element.style.flexDirection = "column";
-  }
+   endroitOuLeMettre.innerText = message;
+   endroitOuLeMettre.classList.replace("invisible", "visible");
+   let espaceChamps = document.getElementsByClassName("field");
+   for (element of espaceChamps) {
+      element.style.flexDirection = "column";
+   }
 }
 
 function effacerMessageErreur(endroitOuLeMettre) {
-  endroitOuLeMettre.classList.replace("visible", "invisible");
+   endroitOuLeMettre.classList.replace("visible", "invisible");
 }
 
 function jouerSon(){
