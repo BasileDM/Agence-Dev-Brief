@@ -58,8 +58,8 @@ h3 {
 }
 /*#endregion*/
 
-/* A partir d'ici pour JAVASCRIPT */
 /*#region Popup*/
+/* A partir d'ici pour JAVASCRIPT */
 .invisible {
    display: none;
 }
@@ -69,6 +69,8 @@ h3 {
 }
 
 #popUp {
+   width: 20rem;
+   height: 13rem;
   z-index: 10;
   position: fixed;
   top: 50%;
@@ -76,7 +78,7 @@ h3 {
   transform: translate(-50%, -50%);
   padding: 20px;
   border: 2px solid transparent;
-  border-radius: 30px;
+  border-radius: 15px;
   box-shadow: 0 0 0px 5px var(--Pink);
   background-color: white;
 }
@@ -102,16 +104,36 @@ h3 {
 #closeButton {
    margin-left: 90%;
 }
+
+/* #errorNom,
+#errorPrenom {
+   font-size: smaller;
+   font-weight: bold;
+   color: var(--Pink);
+   border: 2px solid var(--Very_Dark_Cyan);
+   border-radius: 10px;
+   animation: animationBoutonRose 0.5s alternate;
+   position: absolute;
+   top: 25%;
+   left: 39%;
+   background-color: var(--Very_Pale_Cyan);
+   padding: 9px;
+} */
+
+#endroitMessage {
+  background-color: var(--Very_Pale_Cyan);
+  border: 2px var(--Pink) solid;
+  border-radius: 10px;
+  animation: animationErreur 0.8s alternate;
+}
 /*#endregion*/
 
 @keyframes animationBoutonRose {
    0% {
       transform: translateX(-500px);
-      scale: (5%);
    }
    100% {
       transform: translateX(0px);
-      scale: (100%);
    }
 }
 
@@ -126,32 +148,37 @@ h3 {
    }
 }
 
-
-#errorNom,
-#errorPrenom {
-   font-size: smaller;
-   font-weight: bold;
-   color: var(--Pink);
-   border: 2px solid var(--Very_Dark_Cyan);
-   border-radius: 10px;
-   animation: animationBoutonRose 0.5s alternate;
-   position: fixed;
-   top: 25%;
-   left: 39%;
-   background-color: var(--Very_Pale_Cyan);
-   padding: 9px;
+@keyframes animationErreur {
+   0% {
+      transform: translateX(-500px);
+      scale: (5%);
+   }
+   40% {
+      background-color: red;
+   }
+   50% {
+      transform: translateX(20px);
+   }
+   60% {
+      background-color: white;
+   }
+   70% {
+      transform: translateX(-20px);
+   }
+   80% {
+      transform: translateX(8px);
+      background-color: red;
+   }
+   90% {
+      transform: translateX(-6px);
+   }
+   100% {
+      transform: translateX(0px);
+      scale: (100%);
+      background-color: white;
+   }
 }
-
-#endroitMessage {
-  background-color: var(--Very_Pale_Cyan);
-  border: 2px var(--Pink) solid;
-  border-radius: 10px;
-  animation: animationBoutonRose 3s alternate;
-}
-
 body,
 html {
    overflow: auto;
 }
-
-/*ici aussi*/

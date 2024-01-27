@@ -94,10 +94,10 @@ function afficherErreur(endroitOuLeMettre, message) {
    jouerSon();
    endroitOuLeMettre.innerText = message;
    endroitOuLeMettre.classList.replace("invisible", "visible");
-   let espaceChamps = document.getElementsByClassName("field");
-   for (element of espaceChamps) {
-      element.style.flexDirection = "column";
-   }
+   // let espaceChamps = document.getElementsByClassName("field");
+   // for (element of espaceChamps) {
+   //    element.style.flexDirection = "column";
+   // }
 }
 
 function effacerErreur(endroitOuLeMettre) {
