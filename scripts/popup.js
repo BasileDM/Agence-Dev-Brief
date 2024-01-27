@@ -1,5 +1,5 @@
 //#region Variables
-let formulaire = `
+const formulaire = `
 <form id="myform" action="#" method="post" onsubmit="gererEnvoi(event)">
    <fieldset>
       <legend>Informations personnelles</legend>
@@ -27,11 +27,7 @@ const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
 const formulaireCTA = document.getElementById("CTA-formulaire");
 const croixBouton = document.getElementById("closeButton");
-let boutonSubmit = document.getElementById("submit_button");
-
-let erreurNom = "Votre nom doit être entre 3 et 12 lettres";
-let erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés";
-let erreurPrenom = "Votre prenom doit être entre 3 et 12 lettres";
+const emplacementErreur = document.getElementById("messageErreur");
 //#endregion
 
 //#region Functions
@@ -46,36 +42,36 @@ function afficherPopup(contenu) {
 function cacherPopup() {
    popUp.classList.replace("visible", "invisible");
    fondPopUp.classList.replace("visible", "invisible");
-   effacerErreur(document.getElementById("endroitMessage"));
+   effacerErreur();
 }
 
 function gererEnvoi(event) {
-   let champNom = document.getElementById("nom");
-   let champPrenom = document.getElementById("prenom");
-   let endroitErreur = document.getElementById("endroitMessage");
+   const champNom = document.getElementById("nom");
+   const champPrenom = document.getElementById("prenom");
 
-   // Ne pas utiliser méthode traditionelle d'envoi de formulaire
-   event.preventDefault();
+   event.preventDefault(); // Ne pas utiliser méthode traditionelle d'envoi de formulaire
+
+   const erreurNom = "Votre nom doit être entre 3 et 12 lettres.";
+   const erreurNomEtPrenom = "Nom et prenom entre 3 et 12 lettres demandés.";
+   const erreurPrenom = "Votre prenom doit être entre 3 et 12 lettres.";
 
    let nomValide = verifierLongueur(champNom, 2, 12);
    let prenomValide = verifierLongueur(champPrenom, 2, 12);
-   console.log(`Nom est valide : ${nomValide}`);
-   console.log(`Prénom est valide : ${prenomValide}`);
 
    if (prenomValide && !nomValide) {
-      afficherErreur(endroitErreur, erreurNom);
+      afficherErreur(erreurNom);
    } else if (!prenomValide && nomValide) {
-      afficherErreur(endroitErreur, erreurPrenom);
+      afficherErreur(erreurPrenom);
    } else if (!prenomValide && !nomValide) {
-      afficherErreur(endroitErreur, erreurNomEtPrenom);
+      afficherErreur(erreurNomEtPrenom);
    } else if (prenomValide && nomValide) {
-      effacerErreur(endroitErreur);
+      effacerErreur();
       setTimeout(() => {
          contenuPopup.innerHTML = "Bravo vous êtes bien enregistré.e.s!";
       }, 10);
       setTimeout(() => {
          cacherPopup();
-      }, 3000);
+      }, 2500);
    }
 }
 
@@ -90,22 +86,25 @@ function verifierLongueur(champFormulaire, longueurMin, longueurMax) {
    }
 }
 
-function afficherErreur(endroitOuLeMettre, message) {
-   jouerSon();
-   endroitOuLeMettre.innerText = message;
-   endroitOuLeMettre.classList.replace("invisible", "visible");
+function afficherErreur(message) {
+   effacerErreur();
+   setTimeout(() => {
+      jouerSon();
+      emplacementErreur.innerText = message;
+      emplacementErreur.classList.replace("invisible", "visible");
+   }, 50);
    // let espaceChamps = document.getElementsByClassName("field");
    // for (element of espaceChamps) {
    //    element.style.flexDirection = "column";
    // }
 }
 
-function effacerErreur(endroitOuLeMettre) {
-   endroitOuLeMettre.classList.replace("visible", "invisible");
+function effacerErreur() {
+   emplacementErreur.classList.replace("visible", "invisible");
 }
 
 function jouerSon() {
-   let audio = new Audio("images/Wiz.mp3");
+   let audio = new Audio("audio/Wiz.mp3");
    audio.play();
 }
 //#endregion
