@@ -164,6 +164,35 @@ h1 {
          left: calc(50svw - calc(clamp(30px, 2.7vw, 100px) / 2));
       }
    }
+   #popUp {
+      min-width: 250px;
+      max-height: 100svh;
+      width: 200px;
+   }
+   .plans-container {
+      flex-direction: column;
+
+      img {
+         width: 100px;
+         height: 100px;
+      }
+      .plan {
+         margin: 0 40px;
+         text-align: center;
+         p {
+            margin: 0;
+         }
+      }
+   }
+   .plan-form  {
+      flex-direction: row;
+      text-wrap: nowrap;
+      padding: 0;
+      fieldset {
+         flex-direction: column;
+         width: max-content;
+      }
+   }
 }
 @media screen and (min-width: 1980px) {
    .svg-logo-container {
