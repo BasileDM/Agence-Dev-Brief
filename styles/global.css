@@ -69,18 +69,32 @@ h3 {
 }
 
 #popUp {
-   width: 20rem;
-   height: 13rem;
+   min-width: 680px;
+   min-height: 280px;
    z-index: 10;
    position: fixed;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    padding: 20px;
-   border: 2px solid transparent;
    border-radius: 15px;
-   box-shadow: 0 0 0px 5px var(--Pink);
+   box-shadow: rgba(0, 0, 0, 0.239) 0 15px 60px 1px , rgba(0, 0, 0, 0.13) 0 5px 5px 2px ;
    background-color: white;
+
+   #nom, #prenom, #email {
+      width: 70%;
+   }
+   label {
+      text-wrap: nowrap;
+      font-size: 0.8rem;
+   }
+   fieldset{
+      border: none;
+   }
+   input {
+      font-size: 0.6rem;
+      margin-bottom: 10px;
+   }
 }
 
 #fondPopUp {
@@ -94,15 +108,44 @@ h3 {
 }
 
 #submit_button {
-   font-size: medium;
    border-radius: 8px;
-   background-color: var(--Pink);
+   background-color: white;
    margin: 8px auto;
-   padding: 3px;
+   padding: 6px;
+   width: 43%;
+   cursor: pointer;
+   border: 2px solid var(--Pink);
+   box-shadow:  3px 3px 3px 1px rgba(0, 0, 0, 0.051), 3px 3px 10px 1px rgba(0, 0, 0, 0.04);
+
+   &:hover {
+      background-color: var(--Pink);
+   }
 }
 
 #closeButton {
-   margin-left: 90%;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   border-radius: 15px;
+   width: 35px;
+   height: 35px;
+   font-size: 1rem;
+   cursor: pointer;
+   border: none;
+   background-color: #fff;
+
+   &:hover {
+      color: var(--Pink);
+   }
+}
+
+#messageErreur {
+   background-color: white;
+   border: 2px red solid;
+   border-radius: 10px;
+   animation: animationErreur 0.8s alternate;
+   margin: 3px;
+   text-align: center;
 }
 
 /* #errorNom,
@@ -119,13 +162,6 @@ h3 {
    background-color: var(--Very_Pale_Cyan);
    padding: 9px;
 } */
-
-#messageErreur {
-   background-color: var(--Very_Pale_Cyan);
-   border: 2px var(--Pink) solid;
-   border-radius: 10px;
-   animation: animationErreur 0.8s alternate;
-}
 /*#endregion*/
 
 @keyframes animationBoutonRose {

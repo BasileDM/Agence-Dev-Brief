@@ -5,8 +5,6 @@ let darkModeToggle;
 function darkMode() {
    const toggleDarkModeButton = document.getElementById("slider");
    const body = document.body;
-   const footer = document.footer;
-   const header = document.header;
 
    darkModeToggle = function () {
       body.classList.toggle("dark-mode");

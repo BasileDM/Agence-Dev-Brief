@@ -2,23 +2,23 @@
 const formulaire = `
 <form id="myform" action="#" method="post" onsubmit="gererEnvoi(event)">
    <fieldset>
-      <legend>Informations personnelles</legend>
+      <legend>Ready to grow your fanbase ?</legend>
       <div class="field">
-         <label for="nom" >Nom*  </label>
+         <label for="nom" >Last Name* : </label>
          <input name="nom" placeholder="Gardin" type="text" id="nom" required />
          <p class="invisible"> </p>
       </div>
       <div class="field">
-         <label for="prenom">Prénom*  </label>
+         <label for="prenom">First Name* : </label>
          <input  name="prenom" placeholder="Blanche" type="text" id="prenom" required />
          <p class="invisible"> </p>
       </div>
       <div class="field">
-         <label for="mail">E-Mail*  </label>
-         <input  name="mail" placeholder="blanche.gardin@gmail.com" type="email" id="mail" required />
+         <label for="email">E-Mail* : </label>
+         <input  name="email" placeholder="blanche.gardin@gmail.com" type="email" id="email" required />
       </div>
       <div class="field">
-         <input type="submit" value="Envoyer" id="submit_button"  />
+         <input type="submit" value="Let's grow !" id="submit_button"  />
       </div>
    </fieldset>
 </form>`;
@@ -26,6 +26,7 @@ const formulaire = `
 const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
 const formulaireCTA = document.getElementById("CTA-formulaire");
+const formulaireCTAHeader = document.getElementById("CTA-formulaire-header");
 const croixBouton = document.getElementById("closeButton");
 const emplacementErreur = document.getElementById("messageErreur");
 //#endregion
@@ -111,6 +112,7 @@ function jouerSon() {
 
 //Main code
 formulaireCTA.addEventListener("click", () => afficherPopup(formulaire));
+formulaireCTAHeader.addEventListener("click", () => afficherPopup(formulaire));
 croixBouton.addEventListener("click", cacherPopup);
 document.addEventListener("click", function (event) {
    if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {
