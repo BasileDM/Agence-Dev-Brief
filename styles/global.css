@@ -59,7 +59,7 @@ h3 {
 /*#endregion*/
 
 /*#region Popup*/
-/* A partir d'ici pour JAVASCRIPT */
+/* A partir d'ici pour POPUP formulaire */
 .invisible {
    display: none;
 }
@@ -78,17 +78,20 @@ h3 {
    transform: translate(-50%, -50%);
    padding: 20px;
    border-radius: 15px;
-   box-shadow: rgba(0, 0, 0, 0.239) 0 15px 60px 1px , rgba(0, 0, 0, 0.13) 0 5px 5px 2px ;
+   box-shadow: rgba(0, 0, 0, 0.239) 0 15px 60px 1px,
+      rgba(0, 0, 0, 0.13) 0 5px 5px 2px;
    background-color: white;
 
-   #nom, #prenom, #email {
+   #nom,
+   #prenom,
+   #email {
       width: 70%;
    }
    label {
       text-wrap: nowrap;
       font-size: 0.8rem;
    }
-   fieldset{
+   fieldset {
       border: none;
    }
    input {
@@ -115,7 +118,8 @@ h3 {
    width: 43%;
    cursor: pointer;
    border: 2px solid var(--Pink);
-   box-shadow:  3px 3px 3px 1px rgba(0, 0, 0, 0.051), 3px 3px 10px 1px rgba(0, 0, 0, 0.04);
+   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.051),
+      3px 3px 10px 1px rgba(0, 0, 0, 0.04);
 
    &:hover {
       background-color: var(--Pink);
@@ -162,6 +166,81 @@ h3 {
    background-color: var(--Very_Pale_Cyan);
    padding: 9px;
 } */
+
+/* A partir d'ici pour POPUP formules/plans */
+.plans-container {
+   border: 1px solid black;
+   border-radius: 15px;
+   width: fit-content;
+   display: flex;
+   flex-direction: row;
+
+   .plan {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 40px 0 60px;
+   }
+   img {
+      width: 150px;
+      height: 150px;
+   }
+}
+.plan-form {
+   padding: 30px;
+
+   fieldset {
+      border: 1px solid red;
+      width: max-content;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      label {
+         font-size: 1.2rem !important;
+      }
+
+      input[type="submit"] {
+         font-size: 1rem !important;
+         padding: 5px;
+         border-radius: 10px;
+         &:hover {
+            background-color: var(--Pink);
+         }
+      }
+   }
+}
+
+input[type="radio"] {
+   transform: scale(1.4);
+}
+input[type="radio"]:checked {
+   accent-color: var(--Pink);
+   transform: scale(1.5);
+}
+
+#item-1-free::before {
+   position: absolute;
+   transform: translate(-30px, 3px);
+   content: "";
+   background-image: url("../images/cross-solid.svg");
+   width: 1rem;
+   height: 1rem;
+   background-size: 100%;
+}
+#item-2-free,
+#item-1-paid,
+#item-2-paid {
+   &::before {
+      position: absolute;
+      transform: translate(-30px, 3px);
+      content: "";
+      background-image: url("../images/check-solid.svg");
+      width: 1rem;
+      height: 1rem;
+      background-size: 100%;
+   }
+}
 /*#endregion*/
 
 @keyframes animationBoutonRose {

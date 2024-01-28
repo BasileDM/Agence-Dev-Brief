@@ -23,10 +23,41 @@ const formulaire = `
    </fieldset>
 </form>`;
 
+const plans = `<div class="plans-container">
+<div class="plan">
+   <h4>Free plan</h4>
+   <img src="images/lock-open-solid.svg" alt="Free plan : an image of an open lock" title="Free plan">
+   <p id="item-1-free">50 Discussions per day</p>
+   <p id="item-2-free">Unlimited space</p>
+</div>
+<div class="plan">
+   <h4>Paid plan</h4>
+   <img src="images/money-bag-solid.svg" alt="Paid plan : An image of a bag of money" title="Paid plan">
+   <p id="item-1-paid">Unlimited discussions !</p>
+   <p id="item-2-paid">Unlimited space</p>
+</div>
+</div>
+<div class="plan-form">
+<form id="planForm" action="#" method="POST" onsubmit="gererEnvoiPlans(event)">
+   <fieldset><strong>Pick a plan : </strong>
+      <div>
+         <label for="freePlan">Free</label>
+         <input type="radio" name="selectedPlan" value="free" id="freePlan">
+      </div>
+      <div>
+         <label for="paidPlan">Paid</label>
+         <input type="radio" name="selectedPlan" value="paid" id="paidPlan">
+      </div>
+      <input type="submit" name="submit" id="submit" value="Start now !">
+   </fieldset>
+</form>
+</div>`;
+
 const popUp = document.getElementById("popUp");
 const contenuPopup = document.getElementById("contenuPopup");
 const formulaireCTA = document.getElementById("CTA-formulaire");
 const formulaireCTAHeader = document.getElementById("CTA-formulaire-header");
+const topButtonCTA = document.getElementById("button-calltoaction-top");
 const croixBouton = document.getElementById("closeButton");
 const emplacementErreur = document.getElementById("messageErreur");
 //#endregion
@@ -113,6 +144,7 @@ function jouerSon() {
 //Main code
 formulaireCTA.addEventListener("click", () => afficherPopup(formulaire));
 formulaireCTAHeader.addEventListener("click", () => afficherPopup(formulaire));
+topButtonCTA.addEventListener("click", () => afficherPopup(plans));
 croixBouton.addEventListener("click", cacherPopup);
 document.addEventListener("click", function (event) {
    if (popUp.classList.contains("visible") && !popUp.contains(event.target)) {

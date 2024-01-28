@@ -8,8 +8,8 @@ let translationArray = [
    ],
    [
       document.getElementById("button-calltoaction-top"),
-      "Try it free",
-      "Essai gratuit",
+      "Our plans",
+      "Nos formules",
    ],
    [
       document.querySelector("header h1"),
