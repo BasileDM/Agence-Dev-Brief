@@ -48,7 +48,7 @@ const plans = `<div class="plans-container">
          <label for="paidPlan">Paid</label>
          <input type="radio" name="selectedPlan" value="paid" id="paidPlan">
       </div>
-      <input type="submit" name="submit" id="submit" value="Start now !">
+      <input type="submit" name="submit" id="submit" value="Go">
    </fieldset>
 </form>
 </div>`;

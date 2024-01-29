@@ -165,9 +165,9 @@ h1 {
       }
    }
    #popUp {
-      min-width: 250px;
-      max-height: 100svh;
-      width: 200px;
+      min-width: 330px;
+      width: fit-content;
+      height: fit-content;;
    }
    .plans-container {
       flex-direction: column;

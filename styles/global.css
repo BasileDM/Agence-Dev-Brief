@@ -69,8 +69,8 @@ h3 {
 }
 
 #popUp {
-   min-width: 680px;
-   min-height: 280px;
+   width: fit-content;
+   height: fit-content;
    z-index: 10;
    position: fixed;
    top: 50%;
@@ -97,6 +97,7 @@ h3 {
    input {
       font-size: 0.6rem;
       margin-bottom: 10px;
+      max-width: 60%;
    }
 }
 
